@@ -30,10 +30,10 @@ assistant-only masking against full-token loss on fixed ToolBench subsets. No
 
 ## Results
 
-| Objective | Train loss | Supervised tokens | Held-out loss | Held-out assistant NLL | Trajectory overlap F1 (n=100) | Exact trajectory match |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Assistant-only | 0.701 | 242,960 | 0.645 | 0.754 | **0.359** | 0 / 100 |
-| Full prompt + assistant | 0.806 | 548,071 | 0.701 | **0.747** | 0.330 | 0 / 100 |
+| Objective | Train loss | Supervised tokens | Held-out loss | Held-out assistant NLL | Trajectory overlap F1 (n=100) | Final-answer subspan EM (n=28 Finish refs) | Exact trajectory match |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Assistant-only | 0.701 | 242,960 | 0.645 | 0.754 | **0.359** | 0 / 28 | 0 / 100 |
+| Full prompt + assistant | 0.806 | 548,071 | 0.701 | **0.747** | 0.330 | 0 / 28 | 0 / 100 |
 
 Both conditions used the same 548,071 input tokens, 512 examples, seed, and 200
 updates. Evaluation covers the same 100 held-out tasks. Assistant-only has
@@ -46,6 +46,16 @@ tool syntax, and final answer. Overlap F1 is also only a lexical diagnostic,
 not actual task success. The dataset records tool observations but does not
 provide a ready-to-run evaluator for these newly generated trajectories. No
 ToolBench task-success score is claimed.
+
+Subspan EM extracts the JSON `final_answer` from `Action: Finish` in both the
+prediction and reference, lowercases it, removes ASCII punctuation, and
+collapses whitespace before exact comparison. Only 28/100 references in this
+evaluation slice end with a Finish call. Neither model generated Finish in
+these 100 capped generations, so both score 0/28. This is a useful failure
+signal, but does **not** mean the generated intermediate actions are all
+incorrect. The cap of 64 generated tokens also makes reaching the final answer
+unlikely; this metric must be rerun with a completion-appropriate generation
+budget before drawing conclusions.
 
 Training did optimize: both loss curves declined materially, and held-out loss
 is lower than final train loss. That is evidence the code learns the recorded

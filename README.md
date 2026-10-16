@@ -23,7 +23,9 @@ has been completed. Its limited results and protocol deviations are documented
 in [`REPORT.md`](REPORT.md), with summary metrics in
 [`RESULTS/toolbench-large-summary.json`](RESULTS/toolbench-large-summary.json).
 The held-out lexical metrics compare generated trajectories, not verified task
-success.
+success. Final-answer subspan EM has been extracted for the existing 100
+predictions; because generation was capped at 64 tokens, neither model reached a
+Finish/final-answer span in that slice.
 
 ## Research question and conditions
 
