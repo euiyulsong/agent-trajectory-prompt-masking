@@ -1,11 +1,13 @@
 {
-  "metric": "ToolBench final_answer normalized exact match",
+  "metric": "ToolBench Finish final_answer normalized exact match",
   "normalization": "lowercase, remove ASCII punctuation, collapse whitespace",
   "n_predictions_matched": 100,
   "n_reference_finish": 28,
   "n_prediction_finish": 0,
+  "n_all_tasks": 100,
+  "n_comparable_final_answers": 0,
   "subspan_em_correct": 0,
-  "subspan_em": 0.0,
+  "subspan_em": null,
   "per_task": [
     {
       "task_id": "Step 5: I'm organizing a business trip to attend a conference in Tokyo. Help me find the best flight options from London to Tokyo with a flexible return date. Additionally, provide me with a list of hotels near the conference venue and the current exchange rate for GBP to JPY.",

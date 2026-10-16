@@ -30,10 +30,10 @@ assistant-only masking against full-token loss on fixed ToolBench subsets. No
 
 ## Results
 
-| Objective | Train loss | Supervised tokens | Held-out loss | Held-out assistant NLL | Trajectory overlap F1 (n=100) | Final-answer subspan EM (n=28 Finish refs) | Exact trajectory match |
+| Objective | Train loss | Supervised tokens | Held-out loss | Held-out assistant NLL | Trajectory overlap F1 (n=100) | Final-answer subspan EM | Exact trajectory match |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Assistant-only | 0.701 | 242,960 | 0.645 | 0.754 | **0.359** | 0 / 28 | 0 / 100 |
-| Full prompt + assistant | 0.806 | 548,071 | 0.701 | **0.747** | 0.330 | 0 / 28 | 0 / 100 |
+| Assistant-only | 0.701 | 242,960 | 0.645 | 0.754 | **0.359** | Not scored: no Finish spans generated | 0 / 100 |
+| Full prompt + assistant | 0.806 | 548,071 | 0.701 | **0.747** | 0.330 | Not scored: no Finish spans generated | 0 / 100 |
 
 Both conditions used the same 548,071 input tokens, 512 examples, seed, and 200
 updates. Evaluation covers the same 100 held-out tasks. Assistant-only has
@@ -47,15 +47,16 @@ not actual task success. The dataset records tool observations but does not
 provide a ready-to-run evaluator for these newly generated trajectories. No
 ToolBench task-success score is claimed.
 
-Subspan EM extracts the JSON `final_answer` from `Action: Finish` in both the
-prediction and reference, lowercases it, removes ASCII punctuation, and
-collapses whitespace before exact comparison. Only 28/100 references in this
-evaluation slice end with a Finish call. Neither model generated Finish in
-these 100 capped generations, so both score 0/28. This is a useful failure
-signal, but does **not** mean the generated intermediate actions are all
-incorrect. The cap of 64 generated tokens also makes reaching the final answer
-unlikely; this metric must be rerun with a completion-appropriate generation
-budget before drawing conclusions.
+Final-answer subspan EM should extract the JSON `final_answer` from `Action:
+Finish` in both prediction and reference, then normalize and compare only those
+answer strings. Inspection of the saved predictions revealed that neither model
+generated a Finish/final_answer span in the first 100 examples. Therefore EM is
+**undefined for this generation run**, not 0/28: scoring zero would conflate
+failure to reach a final answer (and the 64-token generation cap) with an
+incorrect final answer. The emitted `0/28` files from an earlier scorer are
+superseded and should not be used. The examples show the models continuing
+Thought/Action text at the generation cutoff; they do not provide a final answer
+to compare.
 
 Training did optimize: both loss curves declined materially, and held-out loss
 is lower than final train loss. That is evidence the code learns the recorded

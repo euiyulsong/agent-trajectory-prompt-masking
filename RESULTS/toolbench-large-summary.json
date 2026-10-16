@@ -12,14 +12,18 @@
       "heldout_teacher_forced_objective_loss": 0.6451264024,
       "heldout_assistant_nll_on_100": 0.7535337148,
       "trajectory_token_overlap_f1_on_100": 0.3588871634,
-      "whole_trajectory_exact_match_on_100": 0
+      "whole_trajectory_exact_match_on_100": 0,
+      "finish_final_answer_subspan_em": null,
+      "finish_final_answer_subspan_em_note": "Undefined: model generated no Finish/final_answer spans in the capped 100-example sample."
     },
     "full_loss": {
       "train_loss": 0.8058556151,
       "heldout_teacher_forced_objective_loss": 0.7012374401,
       "heldout_assistant_nll_on_100": 0.7469252521,
       "trajectory_token_overlap_f1_on_100": 0.3298320741,
-      "whole_trajectory_exact_match_on_100": 0
+      "whole_trajectory_exact_match_on_100": 0,
+      "finish_final_answer_subspan_em": null,
+      "finish_final_answer_subspan_em_note": "Undefined: model generated no Finish/final_answer spans in the capped 100-example sample."
     },
     "paired_difference_assistant_minus_full_trajectory_overlap_f1": {
       "mean": 0.0290550893,

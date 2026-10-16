@@ -25,7 +25,7 @@ in [`REPORT.md`](REPORT.md), with summary metrics in
 The held-out lexical metrics compare generated trajectories, not verified task
 success. Final-answer subspan EM has been extracted for the existing 100
 predictions; because generation was capped at 64 tokens, neither model reached a
-Finish/final-answer span in that slice.
+Finish/final-answer span in that slice, so answer EM is undefined (not 0%).
 
 ## Research question and conditions
 

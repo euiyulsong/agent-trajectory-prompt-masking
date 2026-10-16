@@ -53,27 +53,34 @@ def score_files(prediction_path: Path, eval_path: Path) -> dict[str, Any]:
             continue
         pred_final = extract_final_answer(candidate.get("prediction", ""))
         ref_final = extract_final_answer(row["messages"][-1].get("content", ""))
-        # Subspan EM is defined only where the reference has a Finish/final_answer.
-        # A generated non-Finish action is counted as not correct (not dropped).
+        # Subspan EM is defined only when both sides contain a final_answer.
+        # Missing Finish is reported as a separate completion failure.
         exact = bool(pred_final is not None and ref_final is not None and normalize(pred_final) == normalize(ref_final))
         rows.append({
             "task_id": task_id,
-            "prediction_finish": pred_final is not None,
-            "reference_finish": ref_final is not None,
+            "prediction_finish": extract_final_answer(candidate.get("prediction", "")) is not None,
+            "reference_finish": extract_final_answer(row["messages"][-1].get("content", "")) is not None,
             "subspan_em": float(exact),
             "prediction_final_answer": pred_final,
             "reference_final_answer": ref_final,
         })
-    applicable = [r for r in rows if r["reference_finish"]]
-    hits = sum(r["subspan_em"] for r in applicable)
     return {
-        "metric": "ToolBench final_answer normalized exact match",
+        "metric": "ToolBench Finish final_answer normalized exact match",
         "normalization": "lowercase, remove ASCII punctuation, collapse whitespace",
         "n_predictions_matched": len(rows),
-        "n_reference_finish": len(applicable),
-        "n_prediction_finish": sum(r["prediction_finish"] for r in applicable),
-        "subspan_em_correct": int(hits),
-        "subspan_em": hits / len(applicable) if applicable else None,
+        "n_reference_finish": sum(r["reference_finish"] for r in rows),
+        "n_prediction_finish": sum(r["prediction_finish"] for r in rows),
+        "n_all_tasks": len(rows),
+        "n_comparable_final_answers": sum(
+            r["prediction_final_answer"] is not None and r["reference_final_answer"] is not None for r in rows
+        ),
+        "subspan_em_correct": int(sum(r["subspan_em"] for r in rows)),
+        "subspan_em": (
+            sum(r["subspan_em"] for r in rows)
+            / sum(r["prediction_final_answer"] is not None and r["reference_final_answer"] is not None for r in rows)
+            if any(r["prediction_final_answer"] is not None and r["reference_final_answer"] is not None for r in rows)
+            else None
+        ),
         "per_task": rows,
     }
 
