@@ -14,7 +14,11 @@
       "trajectory_token_overlap_f1_on_100": 0.3588871634,
       "whole_trajectory_exact_match_on_100": 0,
       "finish_final_answer_subspan_em": null,
-      "finish_final_answer_subspan_em_note": "Undefined: model generated no Finish/final_answer spans in the capped 100-example sample."
+      "finish_final_answer_subspan_em_note": "Undefined: model generated no Finish/final_answer spans in the capped 100-example sample.",
+      "bertscore_f1": 0.5983524814,
+      "rouge1_f1": 0.3883223940,
+      "rouge2_f1": 0.1955260468,
+      "rougeL_f1": 0.2735979704
     },
     "full_loss": {
       "train_loss": 0.8058556151,
@@ -23,7 +27,11 @@
       "trajectory_token_overlap_f1_on_100": 0.3298320741,
       "whole_trajectory_exact_match_on_100": 0,
       "finish_final_answer_subspan_em": null,
-      "finish_final_answer_subspan_em_note": "Undefined: model generated no Finish/final_answer spans in the capped 100-example sample."
+      "finish_final_answer_subspan_em_note": "Undefined: model generated no Finish/final_answer spans in the capped 100-example sample.",
+      "bertscore_f1": 0.5750297278,
+      "rouge1_f1": 0.3522858215,
+      "rouge2_f1": 0.1614829713,
+      "rougeL_f1": 0.2475884721
     },
     "paired_difference_assistant_minus_full_trajectory_overlap_f1": {
       "mean": 0.0290550893,

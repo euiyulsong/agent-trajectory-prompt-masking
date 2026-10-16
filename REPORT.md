@@ -30,6 +30,25 @@ assistant-only masking against full-token loss on fixed ToolBench subsets. No
 
 ## Results
 
+### Reference-based text similarity (100 generated predictions)
+
+| Objective | BERTScore F1 | ROUGE-1 F1 | ROUGE-2 F1 | ROUGE-L F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Assistant-only | **0.5984** | **0.3883** | **0.1955** | **0.2736** |
+| Full prompt + assistant | 0.5750 | 0.3523 | 0.1615 | 0.2476 |
+
+These metrics compare the full capped generated trajectory to the full reference
+assistant turn, not a final-answer-only span. They are text similarity metrics,
+not tool execution success. BERTScore used `microsoft/deberta-xlarge-mnli`,
+English, no baseline rescaling. ROUGE uses the `rouge-score` package with Porter
+stemming; table reports macro-averaged per-example F1. The exact per-task values
+are in `RESULTS/toolbench-large-*-reference-metrics.json`.
+
+An LLM-judge implementation is included, but no judge call was made: no API
+credential or local compatible endpoint was configured in the environment. The
+script accepts an explicit endpoint/model and can score all 100 references (or
+a specified subset) without sending data to a provider by default.
+
 | Objective | Train loss | Supervised tokens | Held-out loss | Held-out assistant NLL | Trajectory overlap F1 (n=100) | Final-answer subspan EM | Exact trajectory match |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Assistant-only | 0.701 | 242,960 | 0.645 | 0.754 | **0.359** | Not scored: no Finish spans generated | 0 / 100 |
