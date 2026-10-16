@@ -18,7 +18,8 @@
       "bertscore_f1": 0.5983524814,
       "rouge1_f1": 0.3883223940,
       "rouge2_f1": 0.1955260468,
-      "rougeL_f1": 0.2735979704
+      "rougeL_f1": 0.2735979704,
+      "llm_judge_gpt_4o_mini_mean_0_4_n20": 1.40
     },
     "full_loss": {
       "train_loss": 0.8058556151,
@@ -31,7 +32,8 @@
       "bertscore_f1": 0.5750297278,
       "rouge1_f1": 0.3522858215,
       "rouge2_f1": 0.1614829713,
-      "rougeL_f1": 0.2475884721
+      "rougeL_f1": 0.2475884721,
+      "llm_judge_gpt_4o_mini_mean_0_4_n20": 1.15
     },
     "paired_difference_assistant_minus_full_trajectory_overlap_f1": {
       "mean": 0.0290550893,

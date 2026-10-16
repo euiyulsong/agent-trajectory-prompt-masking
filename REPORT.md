@@ -44,10 +44,15 @@ English, no baseline rescaling. ROUGE uses the `rouge-score` package with Porter
 stemming; table reports macro-averaged per-example F1. The exact per-task values
 are in `RESULTS/toolbench-large-*-reference-metrics.json`.
 
-An LLM-judge implementation is included, but no judge call was made: no API
-credential or local compatible endpoint was configured in the environment. The
-script accepts an explicit endpoint/model and can score all 100 references (or
-a specified subset) without sending data to a provider by default.
+Reference-grounded LLM judge (`gpt-4o-mini`, 0–4 scale) was run on the same first
+20 tasks for each objective. Assistant-only mean score was **1.40/4** (scores:
+0=2, 1=10, 2=6, 3=2); full-loss mean was **1.15/4** (0=5, 1=9, 2=4, 3=2).
+This is a small judge sample, not a statistically reliable benchmark result.
+The judge compared task-relevant correctness/completeness against the reference
+and ignored wording. Full per-task rationales are stored in
+`RESULTS/toolbench-large-*-llm-judge.json`. Because reference trajectories may
+contain invalid/outdated tool outcomes and generations stop at 64 tokens, judge
+scores reflect incomplete responses in this pilot.
 
 | Objective | Train loss | Supervised tokens | Held-out loss | Held-out assistant NLL | Trajectory overlap F1 (n=100) | Final-answer subspan EM | Exact trajectory match |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |

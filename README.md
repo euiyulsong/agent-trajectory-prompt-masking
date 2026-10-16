@@ -24,8 +24,9 @@ in [`REPORT.md`](REPORT.md), with summary metrics in
 [`RESULTS/toolbench-large-summary.json`](RESULTS/toolbench-large-summary.json).
 The held-out lexical metrics compare generated trajectories, not verified task
 success. Reference-based BERTScore and ROUGE-1/2/L are available for the existing
-100 predictions. A reference-grounded LLM judge is also implemented, but requires
-an explicitly configured OpenAI-compatible endpoint; see `eval_references.py`.
+100 predictions. An initial reference-grounded `gpt-4o-mini` judge run is also
+included in the report and result artifacts; see `eval_references.py` to
+reproduce or extend it.
 
 ## Research question and conditions
 
