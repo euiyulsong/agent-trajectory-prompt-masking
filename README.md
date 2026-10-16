@@ -20,6 +20,9 @@ is not evidence about agent quality.
 
 A first ToolBench training/evaluation pilot has been completed. Its limited
 results and important deviations are documented in [`REPORT.md`](REPORT.md).
+The reported `0/27` exact matches compare complete reasoning/tool trajectories,
+not just final answers; this strict metric should not be read as “the model got
+every answer wrong.”
 
 ## Research question and conditions
 

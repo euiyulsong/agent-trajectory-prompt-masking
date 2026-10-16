@@ -30,17 +30,21 @@ ToolBench. No τ-bench or AgentBench experiment has been run.
 
 ## Results
 
-| Objective | Train loss | Supervised tokens/epoch | Mean held-out assistant NLL | Exact whole-response match |
-| --- | ---: | ---: | ---: | ---: |
-| Assistant-only | 1.023 | 20,887 | **0.9680** | 0 / 27 |
-| Full prompt + assistant | 1.415 | 50,074 | 0.9877 | 0 / 27 |
+| Objective | Train loss | Supervised tokens/epoch | Mean held-out assistant NLL | Whole-trajectory token-overlap F1 | Exact whole-response match |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Assistant-only | 1.023 | 20,887 | **0.9680** | **0.392** | 0 / 27 |
+| Full prompt + assistant | 1.415 | 50,074 | 0.9877 | 0.336 | 0 / 27 |
 
 Both conditions used the same 50,074 input tokens, 57 examples, seed, and 30
 updates. Evaluation is teacher-forced NLL on the final assistant response for
 27 fixed examples plus deterministic generation capped at 128 tokens. Exact
-match is an intentionally strict diagnostic and is not an appropriate ToolBench
-task-success metric. No paired confidence interval or task-level success score
-is reported.
+match compares the entire generated trajectory string (reasoning, tool syntax,
+and final answer) with the reference and is therefore too strict to be an
+informative quality measure. Token-overlap F1 is also over the entire trajectory
+and is only a rough lexical diagnostic, not task success. No ToolBench
+task-success score or paired confidence interval is reported. Better follow-up
+evaluation should parse and execute the predicted tool calls or score the final
+answer separately.
 
 Observed assistant-NLL difference (full minus assistant-only) is +0.0197 nats
 per token in favor of assistant-only on this small held-out subset. This is

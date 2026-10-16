@@ -276,6 +276,8 @@ def evaluate(args: argparse.Namespace) -> None:
     from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
     import math
+    import re
+    import string
 
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32)
@@ -306,11 +308,23 @@ def evaluate(args: argparse.Namespace) -> None:
         labels[:, prompt_for_loss.shape[1]:] = target_ids
         with torch.no_grad():
             out = model(input_ids=joint, attention_mask=torch.ones_like(joint), labels=labels)
+        # Strict string equality is not meaningful for ToolBench trajectories:
+        # they include long natural-language reasoning, tool syntax, and final
+        # answers. Report a normalized token-overlap score as a diagnostic,
+        # alongside teacher-forced token NLL; not as benchmark task success.
+        def normalize(text: str) -> list[str]:
+            text = text.lower().translate(str.maketrans("", "", string.punctuation))
+            return re.findall(r"\w+", text)
+
+        pred_tokens, target_tokens = normalize(pred), normalize(target)
+        common = sum((__import__("collections").Counter(pred_tokens) & __import__("collections").Counter(target_tokens)).values())
+        overlap_f1 = 2 * common / (len(pred_tokens) + len(target_tokens)) if pred_tokens or target_tokens else 1.0
         outputs.append({
             "task_id": row["task_id"], "prediction": pred, "target": target,
             "target_token_count": int(target_ids.shape[1]),
             "assistant_nll": float(out.loss),
             "exact_match": float(pred.strip() == target.strip()),
+            "token_overlap_f1": overlap_f1,
         })
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text("\n".join(json.dumps(row, ensure_ascii=False) for row in outputs) + "\n")
