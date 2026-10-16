@@ -18,6 +18,9 @@ claim cross-benchmark results until each adapter has been audited and run.
 The `toy` smoke-test dataset is synthetic and tests pipeline mechanics only; it
 is not evidence about agent quality.
 
+A first ToolBench training/evaluation pilot has been completed. Its limited
+results and important deviations are documented in [`REPORT.md`](REPORT.md).
+
 ## Research question and conditions
 
 Primary comparison: train identical trajectories with (A) assistant-message
@@ -46,12 +49,11 @@ python -m pip install -r requirements.txt
 python trajectory_bench.py smoke
 ```
 
-Training/evaluation commands will be documented after adapter validation. No
-benchmark data, model weights, credentials, or generated trajectories are
-committed. ToolBench terms, license, source version, and any required API
-credentials must be checked before downloading or running it. τ-bench may
-require live domain simulators; AgentBench environments have distinct setup and
-license requirements.
+No benchmark data, model weights, credentials, or generated trajectories are
+committed. The initial ToolBench adapter requires locally downloaded
+`toolllama_G123_dfs_train.json` and `toolllama_G123_dfs_eval.json` JSON files.
+τ-bench may require live domain simulators; AgentBench environments have
+distinct setup and license requirements.
 
 ## Protocol requirements
 

@@ -22,6 +22,13 @@ condition: filter using the maximum rendered length across conditions before
 training and report the excluded fraction. Use the benchmark's own task success
 evaluation where possible; compare outcomes paired by task and seed.
 
+## First ToolBench pilot run
+
+The initial 57-train / 27-held-out pilot, its exact deviations, and descriptive
+results are documented in [`../REPORT.md`](../REPORT.md). In particular, it is
+not an official ToolBench task-success evaluation: the oversized static system
+tool schema was compacted, and the separate official test split was not run.
+
 ## Objectives
 
 - `assistant_only`: label assistant turns only, including assistant headers and
