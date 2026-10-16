@@ -1,0 +1,44 @@
+{
+  "dataset": "ToolBench",
+  "train_examples": 512,
+  "heldout_for_generation": 100,
+  "seed": 42,
+  "optimizer_steps_per_objective": 200,
+  "max_sequence_length": 2048,
+  "max_generated_tokens": 64,
+  "metrics": {
+    "assistant_only": {
+      "train_loss": 0.7012081301,
+      "heldout_teacher_forced_objective_loss": 0.6451264024,
+      "heldout_assistant_nll_on_100": 0.7535337148,
+      "trajectory_token_overlap_f1_on_100": 0.3588871634,
+      "whole_trajectory_exact_match_on_100": 0
+    },
+    "full_loss": {
+      "train_loss": 0.8058556151,
+      "heldout_teacher_forced_objective_loss": 0.7012374401,
+      "heldout_assistant_nll_on_100": 0.7469252521,
+      "trajectory_token_overlap_f1_on_100": 0.3298320741,
+      "whole_trajectory_exact_match_on_100": 0
+    },
+    "paired_difference_assistant_minus_full_trajectory_overlap_f1": {
+      "mean": 0.0290550893,
+      "task_bootstrap_ci95": [0.0105852621, 0.0478083787],
+      "bootstrap_resamples": 10000,
+      "seed": 42
+    },
+    "paired_difference_full_minus_assistant_assistant_nll": {
+      "mean": -0.0066084627,
+      "task_bootstrap_ci95": [-0.0118765061, -0.0013416370],
+      "bootstrap_resamples": 10000,
+      "seed": 42
+    }
+  },
+  "limitations": [
+    "Only one training seed.",
+    "Generated trajectory metrics are lexical overlap, not ToolBench task success or tool execution success.",
+    "Only the first 100 of 500 held-out examples were generation-evaluated due to runtime limit.",
+    "The static system/tool schema was compacted while preserving the task and recorded trajectory.",
+    "Full loss changes prompt supervision and relative assistant-token weighting."
+  ]
+}

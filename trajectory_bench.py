@@ -152,30 +152,8 @@ def prepare_toolbench(args: argparse.Namespace) -> None:
 
     candidates = [row for row in train_all if row["task_id"] not in test_ids]
     random.Random(args.seed).shuffle(candidates)
-    train = candidates[: args.train_examples]
-    eval_rows = candidates[args.train_examples : args.train_examples + args.eval_examples]
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     max_length = args.max_length
-    kept_train, kept_eval = [], []
-    for row, dest in [(r, kept_train) for r in train] + [(r, kept_eval) for r in eval_rows]:
-        # Filter long serialized tool schemas and trajectories. Supervision and
-        # all user/tool context remain intact for each retained task.
-        messages = row["messages"]
-        first_user = next((m["content"] for m in messages if m["role"] == "user"), "")
-        rendered = [
-            ({"role": "system", "content": "You are an agent. Solve the user's task using the available tool trajectory.\nTask: " + first_user}
-             if msg["role"] == "system" else msg)
-            for msg in messages
-        ]
-        ids = tokenizer.apply_chat_template(rendered, tokenize=True, add_generation_prompt=False)
-        if isinstance(ids, dict):
-            ids = ids["input_ids"]
-        if len(ids) <= max_length and row["messages"][-1]["role"] == "assistant":
-            dest.append(row)
-    # The source includes very large function documentation in the system
-    # message. For the pilot only, retain the task instructions from the
-    # original user message and keep the trajectory observations/calls intact.
-    # This avoids wasting the context budget on repeated static tool schemas.
     def compact_system(row: dict[str, Any]) -> dict[str, Any]:
         messages = row["messages"]
         first_user = next((m["content"] for m in messages if m["role"] == "user"), "")
@@ -188,8 +166,29 @@ def prepare_toolbench(args: argparse.Namespace) -> None:
                 compact.append(msg)
         return {**row, "messages": compact}
 
-    kept_train = [compact_system(row) for row in kept_train]
-    kept_eval = [compact_system(row) for row in kept_eval]
+    kept = []
+    for row in candidates:
+        row = compact_system(row)
+        messages = row["messages"]
+        # Keep actual agentic traces with at least one tool observation.
+        if not any(message["role"] == "tool" for message in messages):
+            continue
+        ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=False)
+        if isinstance(ids, dict):
+            ids = ids["input_ids"]
+        if len(ids) <= max_length and messages[-1]["role"] == "assistant":
+            kept.append(row)
+    import hashlib
+    train = kept[: args.train_examples]
+    eval_pool = kept[args.train_examples :]
+    eval_rows = []
+    for row in eval_pool:
+        digest = hashlib.sha256(row["task_id"].encode("utf-8")).digest()
+        if digest[0] < args.eval_percent * 256 / 100:
+            eval_rows.append(row)
+        if len(eval_rows) >= args.eval_examples:
+            break
+    kept_train, kept_eval = train, eval_rows
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for name, rows in [("train", kept_train), ("eval", kept_eval)]:
         with (args.output_dir / f"{name}.jsonl").open("w", encoding="utf-8") as stream:
@@ -207,7 +206,9 @@ def prepare_toolbench(args: argparse.Namespace) -> None:
         "max_length": max_length,
         "excluded_for_length": args.train_examples + args.eval_examples - len(kept_train) - len(kept_eval),
         "official_test_count": len(official_test),
-        "split_note": "Fixed official test excluded from this train/eval pilot; task IDs kept disjoint.",
+        "candidate_count": len(candidates),
+        "tool_trajectory_count_after_filter": len(kept),
+        "split_note": "Fixed official test excluded; deterministic train prefix and hash-based held-out train-pool sample, task IDs disjoint.",
     }
     (args.output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2))
     print(json.dumps(manifest, indent=2))
@@ -224,10 +225,13 @@ def train(args: argparse.Namespace) -> None:
     from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments, set_seed
 
     set_seed(args.seed)
+    args.output.mkdir(parents=True, exist_ok=True)
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     tokenizer.pad_token = tokenizer.eos_token
     rows = read_jsonl(args.data_dir / "train.jsonl")
+    eval_rows = read_jsonl(args.data_dir / "eval.jsonl")
     encoded = [encode_messages(tokenizer, row["messages"], args.objective) for row in rows]
+    encoded_eval = [encode_messages(tokenizer, row["messages"], args.objective) for row in eval_rows]
     dtype = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else torch.float32
     model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=dtype)
     model = get_peft_model(model, LoraConfig(
@@ -246,7 +250,7 @@ def train(args: argparse.Namespace) -> None:
             result["labels"].append(row["labels"] + [-100] * pad)
         return {key: torch.tensor(value) for key, value in result.items()}
 
-        training_args = TrainingArguments(
+    training_args = TrainingArguments(
         output_dir=str(args.output), per_device_train_batch_size=1,
         gradient_accumulation_steps=args.gradient_accumulation,
         num_train_epochs=args.epochs, max_steps=args.max_steps,
@@ -254,7 +258,10 @@ def train(args: argparse.Namespace) -> None:
         logging_steps=5, save_strategy="no", report_to="none", bf16=dtype == torch.bfloat16,
         gradient_checkpointing=True, remove_unused_columns=False, seed=args.seed, data_seed=args.seed,
     )
-    trainer = Trainer(model=model, args=training_args, train_dataset=Dataset.from_list(encoded), data_collator=collate)
+    trainer = Trainer(
+        model=model, args=training_args, train_dataset=Dataset.from_list(encoded),
+        eval_dataset=Dataset.from_list(encoded_eval), data_collator=collate,
+    )
     train_result = trainer.train()
     args.output.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(args.output)
@@ -265,6 +272,8 @@ def train(args: argparse.Namespace) -> None:
         "input_tokens": sum(len(row["input_ids"]) for row in encoded),
         "loss_tokens": sum(sum(token != -100 for token in row["labels"]) for row in encoded),
         "train_loss": train_result.metrics.get("train_loss"),
+        "eval_loss": trainer.evaluate().get("eval_loss"),
+        "training_history": trainer.state.log_history,
         "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
     }
     (args.output / "run.json").write_text(json.dumps(run, indent=2))
@@ -275,9 +284,9 @@ def evaluate(args: argparse.Namespace) -> None:
     import torch
     from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
-    import math
     import re
     import string
+    import time
 
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32)
@@ -286,7 +295,9 @@ def evaluate(args: argparse.Namespace) -> None:
     model.to(device).eval()
     rows = read_jsonl(args.data_dir / "eval.jsonl")
     outputs = []
-    for row in rows:
+    limit = min(len(rows), args.eval_limit)
+    for row_index, row in enumerate(rows[:limit], 1):
+        started = time.monotonic()
         prompt = row["messages"][:-1]
         encoded = tokenizer.apply_chat_template(prompt, tokenize=True, add_generation_prompt=True, return_tensors="pt")
         if isinstance(encoded, dict):
@@ -326,6 +337,8 @@ def evaluate(args: argparse.Namespace) -> None:
             "exact_match": float(pred.strip() == target.strip()),
             "token_overlap_f1": overlap_f1,
         })
+        if row_index % 25 == 0:
+            print(f"Evaluated {row_index}/{limit}; last_task_seconds={time.monotonic() - started:.1f}", flush=True)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text("\n".join(json.dumps(row, ensure_ascii=False) for row in outputs) + "\n")
     print(f"Wrote {len(outputs)} predictions to {args.output}")
@@ -369,11 +382,13 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--train-examples", type=int, default=100)
     parser.add_argument("--eval-examples", type=int, default=50)
+    parser.add_argument("--eval-percent", type=int, default=2)
     parser.add_argument("--max-length", type=int, default=2048)
     parser.add_argument("--epochs", type=float, default=1)
     parser.add_argument("--max-steps", type=int, default=100)
     parser.add_argument("--gradient-accumulation", type=int, default=4)
     parser.add_argument("--max-new-tokens", type=int, default=256)
+    parser.add_argument("--eval-limit", type=int, default=200)
     args = parser.parse_args()
     if args.command == "smoke":
         smoke()

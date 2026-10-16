@@ -18,11 +18,12 @@ claim cross-benchmark results until each adapter has been audited and run.
 The `toy` smoke-test dataset is synthetic and tests pipeline mechanics only; it
 is not evidence about agent quality.
 
-A first ToolBench training/evaluation pilot has been completed. Its limited
-results and important deviations are documented in [`REPORT.md`](REPORT.md).
-The reported `0/27` exact matches compare complete reasoning/tool trajectories,
-not just final answers; this strict metric should not be read as “the model got
-every answer wrong.”
+A larger ToolBench pilot (512 train / 500 held-out; 200 updates per objective)
+has been completed. Its limited results and protocol deviations are documented
+in [`REPORT.md`](REPORT.md), with summary metrics in
+[`RESULTS/toolbench-large-summary.json`](RESULTS/toolbench-large-summary.json).
+The held-out lexical metrics compare generated trajectories, not verified task
+success.
 
 ## Research question and conditions
 
