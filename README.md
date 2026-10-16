@@ -24,6 +24,16 @@ in [`REPORT.md`](REPORT.md), with summary metrics in
 [`RESULTS/toolbench-large-summary.json`](RESULTS/toolbench-large-summary.json).
 The same 100 examples have now also been evaluated with the untuned base model
 as a zero-shot baseline.
+
+LLM judge (`gpt-4o-mini`, same 20 examples per condition; 0–4 scale):
+
+| Condition | Mean score | Per-task scores and rationales |
+| --- | ---: | --- |
+| Assistant-only | 1.40 | [JSON](RESULTS/toolbench-large-assistant-llm-judge.json) |
+| Full loss | 1.15 | [JSON](RESULTS/toolbench-large-full-llm-judge.json) |
+| Zero-shot | 1.40 | [JSON](RESULTS/toolbench-large-zeroshot-llm-judge.json) |
+
+See [the report](REPORT.md) for interpretation and limitations.
 The held-out lexical metrics compare generated trajectories, not verified task
 success. Reference-based BERTScore and ROUGE-1/2/L are available for the existing
 100 predictions. An initial reference-grounded `gpt-4o-mini` judge run is also
