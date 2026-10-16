@@ -36,6 +36,7 @@ assistant-only masking against full-token loss on fixed ToolBench subsets. No
 | --- | ---: | ---: | ---: | ---: |
 | Assistant-only | **0.5984** | **0.3883** | **0.1955** | **0.2736** |
 | Full prompt + assistant | 0.5750 | 0.3523 | 0.1615 | 0.2476 |
+| Zero-shot base | 0.5828 | 0.3252 | 0.1531 | 0.2447 |
 
 These metrics compare the full capped generated trajectory to the full reference
 assistant turn, not a final-answer-only span. They are text similarity metrics,
@@ -45,9 +46,10 @@ stemming; table reports macro-averaged per-example F1. The exact per-task values
 are in `RESULTS/toolbench-large-*-reference-metrics.json`.
 
 Reference-grounded LLM judge (`gpt-4o-mini`, 0–4 scale) was run on the same first
-20 tasks for each objective. Assistant-only mean score was **1.40/4** (scores:
-0=2, 1=10, 2=6, 3=2); full-loss mean was **1.15/4** (0=5, 1=9, 2=4, 3=2).
-This is a small judge sample, not a statistically reliable benchmark result.
+20 tasks for each condition. Assistant-only mean score was **1.40/4** (scores:
+0=2, 1=10, 2=6, 3=2); full-loss mean was **1.15/4** (0=5, 1=9, 2=4, 3=2);
+zero-shot mean was **1.40/4** (1=12, 2=8). This is a small judge sample, not a
+statistically reliable benchmark result.
 The judge compared task-relevant correctness/completeness against the reference
 and ignored wording. Full per-task rationales are stored in
 `RESULTS/toolbench-large-*-llm-judge.json`. Because reference trajectories may

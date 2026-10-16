@@ -282,7 +282,6 @@ def train(args: argparse.Namespace) -> None:
 
 def evaluate(args: argparse.Namespace) -> None:
     import torch
-    from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
     import re
     import string
@@ -290,7 +289,9 @@ def evaluate(args: argparse.Namespace) -> None:
 
     tokenizer = AutoTokenizer.from_pretrained(args.model)
     model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32)
-    model = PeftModel.from_pretrained(model, args.adapter)
+    if args.adapter is not None:
+        from peft import PeftModel
+        model = PeftModel.from_pretrained(model, args.adapter)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model.to(device).eval()
     rows = read_jsonl(args.data_dir / "eval.jsonl")

@@ -22,6 +22,8 @@ A larger ToolBench pilot (512 train / 500 held-out; 200 updates per objective)
 has been completed. Its limited results and protocol deviations are documented
 in [`REPORT.md`](REPORT.md), with summary metrics in
 [`RESULTS/toolbench-large-summary.json`](RESULTS/toolbench-large-summary.json).
+The same 100 examples have now also been evaluated with the untuned base model
+as a zero-shot baseline.
 The held-out lexical metrics compare generated trajectories, not verified task
 success. Reference-based BERTScore and ROUGE-1/2/L are available for the existing
 100 predictions. An initial reference-grounded `gpt-4o-mini` judge run is also

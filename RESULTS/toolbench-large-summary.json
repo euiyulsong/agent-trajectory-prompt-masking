@@ -35,6 +35,13 @@
       "rougeL_f1": 0.2475884721,
       "llm_judge_gpt_4o_mini_mean_0_4_n20": 1.15
     },
+    "zero_shot": {
+      "bertscore_f1": 0.5827744925,
+      "rouge1_f1": 0.3251966561,
+      "rouge2_f1": 0.1530768446,
+      "rougeL_f1": 0.2446743874,
+      "llm_judge_gpt_4o_mini_mean_0_4_n20": 1.40
+    },
     "paired_difference_assistant_minus_full_trajectory_overlap_f1": {
       "mean": 0.0290550893,
       "task_bootstrap_ci95": [0.0105852621, 0.0478083787],

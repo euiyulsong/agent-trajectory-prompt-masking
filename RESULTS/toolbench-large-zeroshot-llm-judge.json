@@ -1,0 +1,2551 @@
+{
+  "prediction_file": "results/toolbench-large-zeroshot.jsonl",
+  "reference_file": "data/toolbench-large/eval.jsonl",
+  "rouge": {
+    "n": 100,
+    "aggregation": "mean per-example precision/recall/F1",
+    "scores": {
+      "rouge1": {
+        "precision": 0.5531481195896125,
+        "recall": 0.24224461740995465,
+        "f1": 0.3251966561055455
+      },
+      "rouge2": {
+        "precision": 0.2674535419832814,
+        "recall": 0.11323755803352081,
+        "f1": 0.1530768445926455
+      },
+      "rougeL": {
+        "precision": 0.42343222520928964,
+        "recall": 0.18133235837565864,
+        "f1": 0.24467438744405023
+      }
+    },
+    "per_task": [
+      {
+        "task_id": "Step 5: I'm organizing a business trip to attend a conference in Tokyo. Help me find the best flight options from London to Tokyo with a flexible return date. Additionally, provide me with a list of hotels near the conference venue and the current exchange rate for GBP to JPY.",
+        "rouge1": {
+          "precision": 0.7435897435897436,
+          "recall": 0.29292929292929293,
+          "f1": 0.4202898550724638
+        },
+        "rouge2": {
+          "precision": 0.34210526315789475,
+          "recall": 0.1326530612244898,
+          "f1": 0.1911764705882353
+        },
+        "rougeL": {
+          "precision": 0.5641025641025641,
+          "recall": 0.2222222222222222,
+          "f1": 0.3188405797101449
+        }
+      },
+      {
+        "task_id": "Step 8: I'm compiling a comprehensive database of VCT teams. Please provide me with the team names, player names, roles, roster status, contact details, and resident status for teams in all regions.",
+        "rouge1": {
+          "precision": 0.38235294117647056,
+          "recall": 0.06532663316582915,
+          "f1": 0.11158798283261803
+        },
+        "rouge2": {
+          "precision": 0.06060606060606061,
+          "recall": 0.010101010101010102,
+          "f1": 0.01731601731601732
+        },
+        "rougeL": {
+          "precision": 0.3235294117647059,
+          "recall": 0.05527638190954774,
+          "f1": 0.0944206008583691
+        }
+      },
+      {
+        "task_id": "Step 5: I'm planning a trip to New York and I need some information about the upcoming football matches. Can you provide me with the predictions for the next 48 hours? Additionally, I'm interested in finding job opportunities in the tech industry. Could you search for Python developer jobs in New York? Also, fetch me some estimated salaries for these jobs.",
+        "rouge1": {
+          "precision": 0.5961538461538461,
+          "recall": 0.3522727272727273,
+          "f1": 0.4428571428571429
+        },
+        "rouge2": {
+          "precision": 0.21568627450980393,
+          "recall": 0.12643678160919541,
+          "f1": 0.15942028985507248
+        },
+        "rougeL": {
+          "precision": 0.4230769230769231,
+          "recall": 0.25,
+          "f1": 0.3142857142857143
+        }
+      },
+      {
+        "task_id": "Step 4: I want to surprise my partner with a homemade birthday cake. Can you give me a list of cake options along with their images? Also, I need the detailed recipe for cake ID 5, including the ingredients and step-by-step method.",
+        "rouge1": {
+          "precision": 0.9090909090909091,
+          "recall": 0.41237113402061853,
+          "f1": 0.5673758865248226
+        },
+        "rouge2": {
+          "precision": 0.5581395348837209,
+          "recall": 0.25,
+          "f1": 0.34532374100719426
+        },
+        "rougeL": {
+          "precision": 0.7727272727272727,
+          "recall": 0.35051546391752575,
+          "f1": 0.48226950354609927
+        }
+      },
+      {
+        "task_id": "Step 5: I'm a music lover and I'm looking for some new tracks to add to my playlist. Can you provide me with the Finland Songs chart information on Billboard-API and the radio object for the ID 'radio123' on Deezer? Also, find the latest release of the artist with the ID '567072' on Shazam.",
+        "rouge1": {
+          "precision": 0.6976744186046512,
+          "recall": 0.40540540540540543,
+          "f1": 0.5128205128205129
+        },
+        "rouge2": {
+          "precision": 0.5,
+          "recall": 0.2876712328767123,
+          "f1": 0.36521739130434777
+        },
+        "rougeL": {
+          "precision": 0.6744186046511628,
+          "recall": 0.3918918918918919,
+          "f1": 0.49572649572649563
+        }
+      },
+      {
+        "task_id": "Step 7: Please give me the price data for the DJI index over the past 7 days and the top 5 worst performers for this index. I need this information for my investment analysis.",
+        "rouge1": {
+          "precision": 0.4716981132075472,
+          "recall": 0.14285714285714285,
+          "f1": 0.21929824561403505
+        },
+        "rouge2": {
+          "precision": 0.09615384615384616,
+          "recall": 0.028735632183908046,
+          "f1": 0.04424778761061947
+        },
+        "rougeL": {
+          "precision": 0.32075471698113206,
+          "recall": 0.09714285714285714,
+          "f1": 0.14912280701754385
+        }
+      },
+      {
+        "task_id": "Step 7: I'm a huge fan of Hearthstone and I want to expand my card collection. Can you help me find all the legendary cards and provide me with their details? Additionally, fetch me some information about the top Diablo 4 influencers and players to inspire me in my gaming journey.",
+        "rouge1": {
+          "precision": 0.5789473684210527,
+          "recall": 0.42857142857142855,
+          "f1": 0.49253731343283574
+        },
+        "rouge2": {
+          "precision": 0.30357142857142855,
+          "recall": 0.2236842105263158,
+          "f1": 0.25757575757575757
+        },
+        "rougeL": {
+          "precision": 0.38596491228070173,
+          "recall": 0.2857142857142857,
+          "f1": 0.3283582089552239
+        }
+      },
+      {
+        "task_id": "Step 6: I want to plan a movie night with my friends and watch some romance movies. Can you recommend some popular romance movies released today? Also, provide me with a random quote from an anime.",
+        "rouge1": {
+          "precision": 0.46296296296296297,
+          "recall": 0.26881720430107525,
+          "f1": 0.34013605442176864
+        },
+        "rouge2": {
+          "precision": 0.18867924528301888,
+          "recall": 0.10869565217391304,
+          "f1": 0.13793103448275862
+        },
+        "rougeL": {
+          "precision": 0.3148148148148148,
+          "recall": 0.1827956989247312,
+          "f1": 0.23129251700680273
+        }
+      },
+      {
+        "task_id": "Step 7: I am a film student and I need to research the latest trends and developments in the film industry. Can you provide me with recent movie news articles to keep me updated? Additionally, suggest some popular combinations of keywords that have been cited by news agencies in recent articles. Also, share the 100 most recent articles and their keywords to help me gather relevant information for my research.",
+        "rouge1": {
+          "precision": 0.6470588235294118,
+          "recall": 0.4714285714285714,
+          "f1": 0.5454545454545455
+        },
+        "rouge2": {
+          "precision": 0.46,
+          "recall": 0.3333333333333333,
+          "f1": 0.38655462184873945
+        },
+        "rougeL": {
+          "precision": 0.5294117647058824,
+          "recall": 0.38571428571428573,
+          "f1": 0.4462809917355372
+        }
+      },
+      {
+        "task_id": "Step 4: I am planning a road trip and I need to find airports along my route. Can you provide me with a list of airports that match the keyword 'California'? Additionally, I would like to know the makes and models of vehicles available for rent in California. Finally, could you give me some information about the tool 'CarbonSutra'?",
+        "rouge1": {
+          "precision": 0.2926829268292683,
+          "recall": 0.13953488372093023,
+          "f1": 0.1889763779527559
+        },
+        "rouge2": {
+          "precision": 0.125,
+          "recall": 0.058823529411764705,
+          "f1": 0.07999999999999999
+        },
+        "rougeL": {
+          "precision": 0.17073170731707318,
+          "recall": 0.08139534883720931,
+          "f1": 0.11023622047244096
+        }
+      },
+      {
+        "task_id": "Step 4: I want to search for images related to 'liverpool' on the internet. Can you fetch the top 20 image search results? Additionally, show me the top search results for 'interesting facts about Liverpool'.",
+        "rouge1": {
+          "precision": 0.36585365853658536,
+          "recall": 0.11029411764705882,
+          "f1": 0.1694915254237288
+        },
+        "rouge2": {
+          "precision": 0.15,
+          "recall": 0.044444444444444446,
+          "f1": 0.06857142857142857
+        },
+        "rougeL": {
+          "precision": 0.34146341463414637,
+          "recall": 0.10294117647058823,
+          "f1": 0.1581920903954802
+        }
+      },
+      {
+        "task_id": "Step 6: Tell me a random quote from the book 'Quiet'. Moreover, I would like to receive a random quote tagged with 'money'.",
+        "rouge1": {
+          "precision": 0.8333333333333334,
+          "recall": 0.17857142857142858,
+          "f1": 0.29411764705882354
+        },
+        "rouge2": {
+          "precision": 0.6981132075471698,
+          "recall": 0.14741035856573706,
+          "f1": 0.24342105263157898
+        },
+        "rougeL": {
+          "precision": 0.7407407407407407,
+          "recall": 0.15873015873015872,
+          "f1": 0.261437908496732
+        }
+      },
+      {
+        "task_id": "Step 4: I'm planning a movie night with my family and we need some show recommendations. Can you provide me with the list of shows currently available on Burning Series? Additionally, fetch a random hobby from the 'general' category using the Hobbies by API-Ninjas.",
+        "rouge1": {
+          "precision": 0.25,
+          "recall": 0.037037037037037035,
+          "f1": 0.06451612903225806
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "rougeL": {
+          "precision": 0.1875,
+          "recall": 0.027777777777777776,
+          "f1": 0.04838709677419354
+        }
+      },
+      {
+        "task_id": "Step 11: I'm a golf enthusiast and I want to stay updated on the latest rankings. Can you fetch the world rankings for the year 2022? I'm interested in knowing the top players and their previous ranks as well. Additionally, I want to get the FedExCup ranking leaderboard for the same year. Thanks!",
+        "rouge1": {
+          "precision": 0.5192307692307693,
+          "recall": 0.28125,
+          "f1": 0.36486486486486486
+        },
+        "rouge2": {
+          "precision": 0.19607843137254902,
+          "recall": 0.10526315789473684,
+          "f1": 0.13698630136986303
+        },
+        "rougeL": {
+          "precision": 0.36538461538461536,
+          "recall": 0.19791666666666666,
+          "f1": 0.25675675675675674
+        }
+      },
+      {
+        "task_id": "Step 6: I'm planning a surprise party for my best friend's birthday next month. Can you help me find the top posts and comments made by my friend on Reddit? It would be great to include some trending memes from the subreddit they frequent as well. Also, check if their username is available on Behence and 9gag.",
+        "rouge1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.3711340206185567,
+          "f1": 0.47682119205298024
+        },
+        "rouge2": {
+          "precision": 0.33962264150943394,
+          "recall": 0.1875,
+          "f1": 0.2416107382550336
+        },
+        "rougeL": {
+          "precision": 0.46296296296296297,
+          "recall": 0.25773195876288657,
+          "f1": 0.3311258278145695
+        }
+      },
+      {
+        "task_id": "Step 10: I am planning a road trip with my friends and we need to rent a car. Can you search for available car rental options in our location and provide me with a list of options along with their prices, ratings, and images? Additionally, I would like to explore some travel accessories for our road trip. Please show me the travel accessories available in the database.",
+        "rouge1": {
+          "precision": 0.20454545454545456,
+          "recall": 0.10465116279069768,
+          "f1": 0.13846153846153847
+        },
+        "rouge2": {
+          "precision": 0.09302325581395349,
+          "recall": 0.047058823529411764,
+          "f1": 0.0625
+        },
+        "rougeL": {
+          "precision": 0.18181818181818182,
+          "recall": 0.09302325581395349,
+          "f1": 0.12307692307692308
+        }
+      },
+      {
+        "task_id": "Step 5: I'm a developer working on a messaging app and I need to retrieve the messages sent by users. Can you help me fetch the message history and provide me with the message content and timestamps? Additionally, I would like to get the pricing information for sending SMS in different countries.",
+        "rouge1": {
+          "precision": 0.40425531914893614,
+          "recall": 0.16964285714285715,
+          "f1": 0.2389937106918239
+        },
+        "rouge2": {
+          "precision": 0.17391304347826086,
+          "recall": 0.07207207207207207,
+          "f1": 0.10191082802547771
+        },
+        "rougeL": {
+          "precision": 0.3404255319148936,
+          "recall": 0.14285714285714285,
+          "f1": 0.2012578616352201
+        }
+      },
+      {
+        "task_id": "Step 9: I'm a climate change researcher and I need access to a wide range of climate change news articles. Can you fetch all the climate change news from top news sites and also provide news from individual sources like The Guardian?",
+        "rouge1": {
+          "precision": 0.27586206896551724,
+          "recall": 0.2318840579710145,
+          "f1": 0.25196850393700787
+        },
+        "rouge2": {
+          "precision": 0.05263157894736842,
+          "recall": 0.04411764705882353,
+          "f1": 0.047999999999999994
+        },
+        "rougeL": {
+          "precision": 0.1896551724137931,
+          "recall": 0.15942028985507245,
+          "f1": 0.1732283464566929
+        }
+      },
+      {
+        "task_id": "Step 4: I'm throwing a number-themed party and I need some interesting facts to entertain my guests. Can you provide a trivia fact about the number 42? Additionally, I'd like to explore some albums by a specific artist. Could you fetch the details of an album with the ID XYZ123? And to add some humor to the event, a random Chuck Norris joke would be perfect.",
+        "rouge1": {
+          "precision": 0.34,
+          "recall": 0.2,
+          "f1": 0.2518518518518518
+        },
+        "rouge2": {
+          "precision": 0.12244897959183673,
+          "recall": 0.07142857142857142,
+          "f1": 0.09022556390977443
+        },
+        "rougeL": {
+          "precision": 0.22,
+          "recall": 0.12941176470588237,
+          "f1": 0.16296296296296298
+        }
+      },
+      {
+        "task_id": "Step 5: I'm hosting a game night with my friends and I need some hilarious jokes to keep everyone entertained. Can you find a joke related to board games? Also, recommend a good pizza place for dinner. It would be great if you could provide some interesting facts about the pizza place's history.",
+        "rouge1": {
+          "precision": 0.6774193548387096,
+          "recall": 0.3620689655172414,
+          "f1": 0.47191011235955055
+        },
+        "rouge2": {
+          "precision": 0.4,
+          "recall": 0.21052631578947367,
+          "f1": 0.27586206896551724
+        },
+        "rougeL": {
+          "precision": 0.6129032258064516,
+          "recall": 0.3275862068965517,
+          "f1": 0.42696629213483145
+        }
+      },
+      {
+        "task_id": "Step 5: I'm planning a trip to Europe and I need to know the exchange rates for different currencies. Can you provide me with the latest exchange rates for USD, EUR, GBP, and CHF? Additionally, convert 500 USD to EUR using the latest rates.",
+        "rouge1": {
+          "precision": 0.5918367346938775,
+          "recall": 0.5918367346938775,
+          "f1": 0.5918367346938775
+        },
+        "rouge2": {
+          "precision": 0.3125,
+          "recall": 0.3125,
+          "f1": 0.3125
+        },
+        "rougeL": {
+          "precision": 0.5306122448979592,
+          "recall": 0.5306122448979592,
+          "f1": 0.5306122448979592
+        }
+      },
+      {
+        "task_id": "Step 6: Can you provide me with the individual result of a robbery incident with ID 10? I need details such as the city, address, latitude, longitude, zip code, arms used, crime name, incident ID, and place of crime. Additionally, I would like to access all the available data of robbery incidents.",
+        "rouge1": {
+          "precision": 0.46153846153846156,
+          "recall": 0.14634146341463414,
+          "f1": 0.2222222222222222
+        },
+        "rouge2": {
+          "precision": 0.1568627450980392,
+          "recall": 0.049079754601226995,
+          "f1": 0.07476635514018692
+        },
+        "rougeL": {
+          "precision": 0.36538461538461536,
+          "recall": 0.11585365853658537,
+          "f1": 0.17592592592592593
+        }
+      },
+      {
+        "task_id": "Step 9: I'm a music enthusiast and I want to explore the SongMeanings database to find interesting lyrics and artists. Can you help me search for artists using the query 'alternative rock'? Also, provide me with the list of songs associated with each artist.",
+        "rouge1": {
+          "precision": 0.6727272727272727,
+          "recall": 0.4625,
+          "f1": 0.5481481481481482
+        },
+        "rouge2": {
+          "precision": 0.3148148148148148,
+          "recall": 0.21518987341772153,
+          "f1": 0.25563909774436094
+        },
+        "rougeL": {
+          "precision": 0.36363636363636365,
+          "recall": 0.25,
+          "f1": 0.2962962962962963
+        }
+      },
+      {
+        "task_id": "Step 7: I'm a journalist researching an article on the latest tech gadgets. Can you provide me with the full-text articles, images, and author information for the top trending tech news articles? I need the articles to be sorted by popularity and include the date of publication.",
+        "rouge1": {
+          "precision": 0.3898305084745763,
+          "recall": 0.2987012987012987,
+          "f1": 0.338235294117647
+        },
+        "rouge2": {
+          "precision": 0.06896551724137931,
+          "recall": 0.05263157894736842,
+          "f1": 0.05970149253731343
+        },
+        "rougeL": {
+          "precision": 0.2542372881355932,
+          "recall": 0.19480519480519481,
+          "f1": 0.22058823529411764
+        }
+      },
+      {
+        "task_id": "Step 10: I'm thinking of investing in ETFs and I need to analyze the risk and return. Can you fetch the risk return analysis in the Risk tab for a specific ETF? Additionally, provide me with the live price of a stock by symbol to compare with the ETF performance.",
+        "rouge1": {
+          "precision": 1.0,
+          "recall": 0.08695652173913043,
+          "f1": 0.16
+        },
+        "rouge2": {
+          "precision": 0.8888888888888888,
+          "recall": 0.07017543859649122,
+          "f1": 0.13008130081300814
+        },
+        "rougeL": {
+          "precision": 1.0,
+          "recall": 0.08695652173913043,
+          "f1": 0.16
+        }
+      },
+      {
+        "task_id": "Step 11: I'm organizing a corporate event and I need real-time updates on the stock market. Fetch the most recent 30 messages posted by verified Investor Relations customers. Also, retrieve the most recent 30 messages containing mentions of my company's handle. Additionally, provide me with the SPAC summary for GGPI.",
+        "rouge1": {
+          "precision": 0.42857142857142855,
+          "recall": 0.2926829268292683,
+          "f1": 0.34782608695652173
+        },
+        "rouge2": {
+          "precision": 0.18181818181818182,
+          "recall": 0.12345679012345678,
+          "f1": 0.14705882352941174
+        },
+        "rougeL": {
+          "precision": 0.30357142857142855,
+          "recall": 0.2073170731707317,
+          "f1": 0.24637681159420288
+        }
+      },
+      {
+        "task_id": "Step 10: I want to check the availability of a pet with ID 789. Can you provide me with the details of the pet and its availability status?",
+        "rouge1": {
+          "precision": 0.75,
+          "recall": 0.17142857142857143,
+          "f1": 0.2790697674418604
+        },
+        "rouge2": {
+          "precision": 0.42857142857142855,
+          "recall": 0.08823529411764706,
+          "f1": 0.14634146341463417
+        },
+        "rougeL": {
+          "precision": 0.75,
+          "recall": 0.17142857142857143,
+          "f1": 0.2790697674418604
+        }
+      },
+      {
+        "task_id": "Step 6: I'm a car enthusiast and I'm curious about the average price and mileage for a BMW 5 series from 2012 in Poland and Australia. Can you provide me with this information? Also, I would like to know the top models in terms of average price and mileage.",
+        "rouge1": {
+          "precision": 0.6153846153846154,
+          "recall": 0.09561752988047809,
+          "f1": 0.16551724137931034
+        },
+        "rouge2": {
+          "precision": 0.3157894736842105,
+          "recall": 0.048,
+          "f1": 0.08333333333333334
+        },
+        "rougeL": {
+          "precision": 0.5128205128205128,
+          "recall": 0.0796812749003984,
+          "f1": 0.1379310344827586
+        }
+      },
+      {
+        "task_id": "Step 6: My music playlist needs a fresh update. Give me the top country albums from the Greatest of All Time chart and suggest a playlist based on those albums. Additionally, provide me with an editorial object to read about the latest music trends.",
+        "rouge1": {
+          "precision": 0.5964912280701754,
+          "recall": 0.3269230769230769,
+          "f1": 0.42236024844720493
+        },
+        "rouge2": {
+          "precision": 0.25,
+          "recall": 0.13592233009708737,
+          "f1": 0.1761006289308176
+        },
+        "rougeL": {
+          "precision": 0.3508771929824561,
+          "recall": 0.19230769230769232,
+          "f1": 0.2484472049689441
+        }
+      },
+      {
+        "task_id": "Step 9: My family loves memes. Fetch the top trending memes from Reddit and also find out if my username is available on Patreon.",
+        "rouge1": {
+          "precision": 0.45454545454545453,
+          "recall": 0.07462686567164178,
+          "f1": 0.1282051282051282
+        },
+        "rouge2": {
+          "precision": 0.2857142857142857,
+          "recall": 0.045112781954887216,
+          "f1": 0.07792207792207792
+        },
+        "rougeL": {
+          "precision": 0.36363636363636365,
+          "recall": 0.05970149253731343,
+          "f1": 0.10256410256410257
+        }
+      },
+      {
+        "task_id": "Step 6: I'm planning a surprise party for my best friend's birthday. Can you suggest some entertaining jokes to make the party more enjoyable? Also, provide me with a random quote to inspire my friend on their special day.",
+        "rouge1": {
+          "precision": 0.5833333333333334,
+          "recall": 0.18421052631578946,
+          "f1": 0.27999999999999997
+        },
+        "rouge2": {
+          "precision": 0.2553191489361702,
+          "recall": 0.07947019867549669,
+          "f1": 0.1212121212121212
+        },
+        "rougeL": {
+          "precision": 0.4166666666666667,
+          "recall": 0.13157894736842105,
+          "f1": 0.19999999999999998
+        }
+      },
+      {
+        "task_id": "Step 6: I'm a financial analyst and I need to monitor the crypto market. Provide me with the top 5 articles from CoinTelegraph, CoinJournal, and CoinCu.",
+        "rouge1": {
+          "precision": 0.7142857142857143,
+          "recall": 0.32710280373831774,
+          "f1": 0.4487179487179487
+        },
+        "rouge2": {
+          "precision": 0.4166666666666667,
+          "recall": 0.18867924528301888,
+          "f1": 0.25974025974025977
+        },
+        "rougeL": {
+          "precision": 0.5918367346938775,
+          "recall": 0.27102803738317754,
+          "f1": 0.3717948717948718
+        }
+      },
+      {
+        "task_id": "Step 4: I'm planning a trip to the United States and I would like to explore the restaurant scene. Can you provide me with a list of all the cities where I can find restaurants? Additionally, I need information about the restaurants in West Bloomfield, Michigan. Please give me the addresses, phone numbers, and websites of these restaurants.",
+        "rouge1": {
+          "precision": 0.509090909090909,
+          "recall": 0.29473684210526313,
+          "f1": 0.3733333333333333
+        },
+        "rouge2": {
+          "precision": 0.14814814814814814,
+          "recall": 0.0851063829787234,
+          "f1": 0.1081081081081081
+        },
+        "rougeL": {
+          "precision": 0.32727272727272727,
+          "recall": 0.18947368421052632,
+          "f1": 0.24
+        }
+      },
+      {
+        "task_id": "Step 4: My nephew is obsessed with Beyblades, and I want to surprise him with a special gift. Can you provide me with a list of Beyblades, including their product information and parts? Additionally, I would like to retrieve the details of a specific Beyblade with the ID 987.",
+        "rouge1": {
+          "precision": 0.4878048780487805,
+          "recall": 0.15151515151515152,
+          "f1": 0.23121387283236997
+        },
+        "rouge2": {
+          "precision": 0.1,
+          "recall": 0.030534351145038167,
+          "f1": 0.04678362573099415
+        },
+        "rougeL": {
+          "precision": 0.34146341463414637,
+          "recall": 0.10606060606060606,
+          "f1": 0.16184971098265893
+        }
+      },
+      {
+        "task_id": "Step 6: I'm planning a hiking trip and I want to avoid any earthquakes along the trail. Fetch the latest earthquake data near the coordinates of the hiking trail using the Latest Earthquake Near Me API. Additionally, convert the mRNA sequence 'UACGUACG' into its DNA sequence equivalent using the mRNA2DNA API.",
+        "rouge1": {
+          "precision": 0.5283018867924528,
+          "recall": 0.2014388489208633,
+          "f1": 0.2916666666666667
+        },
+        "rouge2": {
+          "precision": 0.2692307692307692,
+          "recall": 0.10144927536231885,
+          "f1": 0.1473684210526316
+        },
+        "rougeL": {
+          "precision": 0.4528301886792453,
+          "recall": 0.17266187050359713,
+          "f1": 0.25
+        }
+      },
+      {
+        "task_id": "Step 6: I'm interested in the winning number sets for Cash4Life between January 1, 2023, and January 5, 2023. Can you also fetch the latest drawing and the random QuickPick number for the upcoming drawing?",
+        "rouge1": {
+          "precision": 0.7142857142857143,
+          "recall": 0.22727272727272727,
+          "f1": 0.3448275862068965
+        },
+        "rouge2": {
+          "precision": 0.36585365853658536,
+          "recall": 0.11450381679389313,
+          "f1": 0.1744186046511628
+        },
+        "rougeL": {
+          "precision": 0.5476190476190477,
+          "recall": 0.17424242424242425,
+          "f1": 0.26436781609195403
+        }
+      },
+      {
+        "task_id": "Step 7: I'm a travel blogger and I want to include the exchange rate from USD to GBP in my blog post. Can you provide me with the current exchange rate? Also, can you list all the available quotes for currency exchange?",
+        "rouge1": {
+          "precision": 0.8611111111111112,
+          "recall": 0.21379310344827587,
+          "f1": 0.3425414364640884
+        },
+        "rouge2": {
+          "precision": 0.7142857142857143,
+          "recall": 0.1736111111111111,
+          "f1": 0.2793296089385475
+        },
+        "rougeL": {
+          "precision": 0.8333333333333334,
+          "recall": 0.20689655172413793,
+          "f1": 0.3314917127071823
+        }
+      },
+      {
+        "task_id": "Step 5: I'm a travel blogger and I'm writing an article about the best hidden gems in Europe. Can you provide me with a map image and some webcams for each hidden gem I mention in my article? This will make it more interactive and engaging for my readers.",
+        "rouge1": {
+          "precision": 0.7209302325581395,
+          "recall": 0.30392156862745096,
+          "f1": 0.4275862068965517
+        },
+        "rouge2": {
+          "precision": 0.40476190476190477,
+          "recall": 0.16831683168316833,
+          "f1": 0.2377622377622378
+        },
+        "rougeL": {
+          "precision": 0.6046511627906976,
+          "recall": 0.2549019607843137,
+          "f1": 0.35862068965517235
+        }
+      },
+      {
+        "task_id": "Step 7: My company is looking to expand our community on Socie. Can you retrieve the details of all the members in our community? Additionally, fetch the specific member with the identifier 123456 and display their information.",
+        "rouge1": {
+          "precision": 0.6,
+          "recall": 0.18,
+          "f1": 0.2769230769230769
+        },
+        "rouge2": {
+          "precision": 0.2413793103448276,
+          "recall": 0.0707070707070707,
+          "f1": 0.109375
+        },
+        "rougeL": {
+          "precision": 0.6,
+          "recall": 0.18,
+          "f1": 0.2769230769230769
+        }
+      },
+      {
+        "task_id": "Step 7: I want to search for posts about technology in the subreddit 'news'. Can you provide the titles, authors, upvote ratios, and thumbnails of the posts? Furthermore, it would be helpful if you could search for comments related to the keyword 'innovation' in these posts and provide the usernames, comment bodies, upvotes, and created dates of the comments.",
+        "rouge1": {
+          "precision": 0.5471698113207547,
+          "recall": 0.21804511278195488,
+          "f1": 0.3118279569892473
+        },
+        "rouge2": {
+          "precision": 0.15384615384615385,
+          "recall": 0.06060606060606061,
+          "f1": 0.08695652173913043
+        },
+        "rougeL": {
+          "precision": 0.41509433962264153,
+          "recall": 0.16541353383458646,
+          "f1": 0.23655913978494622
+        }
+      },
+      {
+        "task_id": "Step 5: My company is organizing a team-building event in Los Angeles. Can you suggest some fun activities for the event? Also, find some local businesses that offer catering services and provide their contact details.",
+        "rouge1": {
+          "precision": 0.3584905660377358,
+          "recall": 0.21839080459770116,
+          "f1": 0.27142857142857146
+        },
+        "rouge2": {
+          "precision": 0.09615384615384616,
+          "recall": 0.05813953488372093,
+          "f1": 0.07246376811594203
+        },
+        "rougeL": {
+          "precision": 0.20754716981132076,
+          "recall": 0.12643678160919541,
+          "f1": 0.15714285714285714
+        }
+      },
+      {
+        "task_id": "Step 7: I'm a developer working on a travel app and I need access to a reliable weather API. Can you suggest some weather APIs that provide current weather data and forecasts? Additionally, provide information on how to integrate these APIs into my application.",
+        "rouge1": {
+          "precision": 0.5490196078431373,
+          "recall": 0.08259587020648967,
+          "f1": 0.14358974358974358
+        },
+        "rouge2": {
+          "precision": 0.08,
+          "recall": 0.011834319526627219,
+          "f1": 0.020618556701030927
+        },
+        "rougeL": {
+          "precision": 0.3333333333333333,
+          "recall": 0.05014749262536873,
+          "f1": 0.08717948717948718
+        }
+      },
+      {
+        "task_id": "Step 10: I want to find some unique and creative items on Redbubble for my upcoming art project. Show me items related to 'abstract art' and 'watercolor painting' with the highest ratings. Also, provide me with the store details of the nearest Target location in zipcode '10009'.",
+        "rouge1": {
+          "precision": 0.5,
+          "recall": 0.078125,
+          "f1": 0.13513513513513514
+        },
+        "rouge2": {
+          "precision": 0.3103448275862069,
+          "recall": 0.04712041884816754,
+          "f1": 0.08181818181818182
+        },
+        "rougeL": {
+          "precision": 0.4666666666666667,
+          "recall": 0.07291666666666667,
+          "f1": 0.12612612612612614
+        }
+      },
+      {
+        "task_id": "Step 10: As an aspiring writer, I'm always on the lookout for unique and captivating words to enhance my storytelling. Can you fetch the word of the day from dictionary.com to inspire my creativity? Additionally, provide me with a random message from kittichai API to add an element of surprise to my writing.",
+        "rouge1": {
+          "precision": 0.7321428571428571,
+          "recall": 0.18141592920353983,
+          "f1": 0.2907801418439716
+        },
+        "rouge2": {
+          "precision": 0.43636363636363634,
+          "recall": 0.10666666666666667,
+          "f1": 0.17142857142857146
+        },
+        "rougeL": {
+          "precision": 0.5,
+          "recall": 0.12389380530973451,
+          "f1": 0.19858156028368795
+        }
+      },
+      {
+        "task_id": "Step 7: I'm exploring OCR options for my friend's art project. Can you recommend an OCR algorithm that performs well with different types of images? It would be great if you could also provide the current version of the OCR service.",
+        "rouge1": {
+          "precision": 0.4166666666666667,
+          "recall": 0.29411764705882354,
+          "f1": 0.3448275862068966
+        },
+        "rouge2": {
+          "precision": 0.19148936170212766,
+          "recall": 0.13432835820895522,
+          "f1": 0.15789473684210525
+        },
+        "rougeL": {
+          "precision": 0.3333333333333333,
+          "recall": 0.23529411764705882,
+          "f1": 0.27586206896551724
+        }
+      },
+      {
+        "task_id": "Step 9: I'm a researcher studying solar energy. Can you fetch the PV power forecast for the latitude 40.7128 and longitude -74.0060? Also, provide me with the shortened URL for a Helioviewer.org link.",
+        "rouge1": {
+          "precision": 0.7272727272727273,
+          "recall": 0.3404255319148936,
+          "f1": 0.46376811594202894
+        },
+        "rouge2": {
+          "precision": 0.46511627906976744,
+          "recall": 0.21505376344086022,
+          "f1": 0.29411764705882354
+        },
+        "rougeL": {
+          "precision": 0.6363636363636364,
+          "recall": 0.2978723404255319,
+          "f1": 0.40579710144927533
+        }
+      },
+      {
+        "task_id": "Step 4: I'm organizing a basketball tournament for my community and I need to create a schedule. Can you provide me with a list of all NBA teams? Additionally, I want to add some fun elements to the tournament. Please share a random Chuck Norris joke related to basketball.",
+        "rouge1": {
+          "precision": 0.34210526315789475,
+          "recall": 0.1,
+          "f1": 0.15476190476190477
+        },
+        "rouge2": {
+          "precision": 0.21621621621621623,
+          "recall": 0.06201550387596899,
+          "f1": 0.0963855421686747
+        },
+        "rougeL": {
+          "precision": 0.3157894736842105,
+          "recall": 0.09230769230769231,
+          "f1": 0.14285714285714285
+        }
+      },
+      {
+        "task_id": "Step 9: I need help organizing a Marvel-themed event for my company's annual party. Can you provide me with specific information about Marvel characters like Spider-Man and Hulk? It would also be great if you could fetch the latest update on the Lightning Roulette game and some entertaining memes to share with my colleagues.",
+        "rouge1": {
+          "precision": 0.5,
+          "recall": 0.25510204081632654,
+          "f1": 0.3378378378378379
+        },
+        "rouge2": {
+          "precision": 0.22448979591836735,
+          "recall": 0.1134020618556701,
+          "f1": 0.1506849315068493
+        },
+        "rougeL": {
+          "precision": 0.4,
+          "recall": 0.20408163265306123,
+          "f1": 0.2702702702702703
+        }
+      },
+      {
+        "task_id": "Step 7: I'm planning a trip to Paris next week and I want to explore the city through webcams. Can you provide me with a list of webcams near the Eiffel Tower with their images and locations? Additionally, fetch me the nearby airports and their details to plan my travel arrangements.",
+        "rouge1": {
+          "precision": 0.5384615384615384,
+          "recall": 0.22105263157894736,
+          "f1": 0.31343283582089554
+        },
+        "rouge2": {
+          "precision": 0.2894736842105263,
+          "recall": 0.11702127659574468,
+          "f1": 0.16666666666666666
+        },
+        "rougeL": {
+          "precision": 0.48717948717948717,
+          "recall": 0.2,
+          "f1": 0.2835820895522388
+        }
+      },
+      {
+        "task_id": "Step 5: I want to cook a special dinner for my significant other. Can you suggest some romantic recipes and provide the nutritional information for each dish? Also, recommend some wine pairings for the dinner.",
+        "rouge1": {
+          "precision": 0.4857142857142857,
+          "recall": 0.27419354838709675,
+          "f1": 0.35051546391752575
+        },
+        "rouge2": {
+          "precision": 0.14705882352941177,
+          "recall": 0.08196721311475409,
+          "f1": 0.10526315789473684
+        },
+        "rougeL": {
+          "precision": 0.4,
+          "recall": 0.22580645161290322,
+          "f1": 0.288659793814433
+        }
+      },
+      {
+        "task_id": "Step 9: I'm an avid sports bettor and want to gather information on the available countries for betting. Can you provide me with a list of countries? Additionally, I'd like to know the bookmakers associated with each country.",
+        "rouge1": {
+          "precision": 0.5098039215686274,
+          "recall": 0.28888888888888886,
+          "f1": 0.36879432624113473
+        },
+        "rouge2": {
+          "precision": 0.22,
+          "recall": 0.12359550561797752,
+          "f1": 0.15827338129496402
+        },
+        "rougeL": {
+          "precision": 0.3137254901960784,
+          "recall": 0.17777777777777778,
+          "f1": 0.22695035460992904
+        }
+      },
+      {
+        "task_id": "Step 11: I'm a data analyst and I need to gather information about different addresses in Adelaide, Australia. Can you give me a list of addresses that match the search string 'data analysis, Adelaide'? Additionally, I would like to retrieve detailed information about a specific address with the addressId '1234'.",
+        "rouge1": {
+          "precision": 0.6122448979591837,
+          "recall": 0.18181818181818182,
+          "f1": 0.2803738317757009
+        },
+        "rouge2": {
+          "precision": 0.25,
+          "recall": 0.07317073170731707,
+          "f1": 0.11320754716981131
+        },
+        "rougeL": {
+          "precision": 0.40816326530612246,
+          "recall": 0.12121212121212122,
+          "f1": 0.18691588785046728
+        }
+      },
+      {
+        "task_id": "Step 9: I want to surprise my friends with a unique song for our gathering. Could you please download the song 'The Phoenix' by user-977421934 on Soundcloud? I would also like to search for tracks by Eminem on Deezer and view the song information of a specific track. Lastly, provide me with a random quote in English to share with my friends.",
+        "rouge1": {
+          "precision": 0.559322033898305,
+          "recall": 0.1793478260869565,
+          "f1": 0.2716049382716049
+        },
+        "rouge2": {
+          "precision": 0.27586206896551724,
+          "recall": 0.08743169398907104,
+          "f1": 0.13278008298755187
+        },
+        "rougeL": {
+          "precision": 0.4067796610169492,
+          "recall": 0.13043478260869565,
+          "f1": 0.19753086419753085
+        }
+      },
+      {
+        "task_id": "Step 5: I'm a sports enthusiast and I want to stay updated on the latest NBA games. Can you provide me with the details of the most recent game? Additionally, I'm interested in knowing the details of a specific game. Lastly, I need a random joke to add some humor to my day.",
+        "rouge1": {
+          "precision": 0.6428571428571429,
+          "recall": 0.20454545454545456,
+          "f1": 0.31034482758620696
+        },
+        "rouge2": {
+          "precision": 0.1951219512195122,
+          "recall": 0.061068702290076333,
+          "f1": 0.09302325581395349
+        },
+        "rougeL": {
+          "precision": 0.5,
+          "recall": 0.1590909090909091,
+          "f1": 0.2413793103448276
+        }
+      },
+      {
+        "task_id": "Step 4: I'm considering investing in NFTs and I want to explore different options. Can you provide me with the aggregated loan offer levels for the collection with address 0x5af0d9827e0c53e4799bb226655a1de152a425a? Also, I'm curious about the rewards for the nakamigos collection. Please retrieve the rewards for nakamigos.",
+        "rouge1": {
+          "precision": 0.68,
+          "recall": 0.16666666666666666,
+          "f1": 0.2677165354330709
+        },
+        "rouge2": {
+          "precision": 0.375,
+          "recall": 0.0891089108910891,
+          "f1": 0.14400000000000002
+        },
+        "rougeL": {
+          "precision": 0.6,
+          "recall": 0.14705882352941177,
+          "f1": 0.2362204724409449
+        }
+      },
+      {
+        "task_id": "Step 6: My company is sponsoring a Formula 1 team and we need to track their performance. Can you give us the teams' rankings, points, team names, and drivers using the Teams API? Additionally, we would like to know the schedule and location of the upcoming race using the Race Calendar API.",
+        "rouge1": {
+          "precision": 0.3333333333333333,
+          "recall": 0.052830188679245285,
+          "f1": 0.09120521172638436
+        },
+        "rouge2": {
+          "precision": 0.12195121951219512,
+          "recall": 0.01893939393939394,
+          "f1": 0.03278688524590164
+        },
+        "rougeL": {
+          "precision": 0.30952380952380953,
+          "recall": 0.04905660377358491,
+          "f1": 0.08469055374592835
+        }
+      },
+      {
+        "task_id": "Step 11: My friend wants to know the versions of a specific file in their GroupDocs Watermark Cloud storage. Can you fetch the file versions for '/documents/sample.docx'? Additionally, check if a particular storage exists for them.",
+        "rouge1": {
+          "precision": 0.5283018867924528,
+          "recall": 0.13333333333333333,
+          "f1": 0.2129277566539924
+        },
+        "rouge2": {
+          "precision": 0.15384615384615385,
+          "recall": 0.03827751196172249,
+          "f1": 0.06130268199233716
+        },
+        "rougeL": {
+          "precision": 0.39622641509433965,
+          "recall": 0.1,
+          "f1": 0.15969581749049433
+        }
+      },
+      {
+        "task_id": "Step 7: Can you validate the email address 'john.doe@example.com'? I also need the details of the country with the country code 'US'. Additionally, I would like to get the chain ID for the chain name 'bsc' from Token Scanner Multichain | Honeypot Checker Multichain.",
+        "rouge1": {
+          "precision": 0.4864864864864865,
+          "recall": 0.2535211267605634,
+          "f1": 0.3333333333333333
+        },
+        "rouge2": {
+          "precision": 0.3611111111111111,
+          "recall": 0.18571428571428572,
+          "f1": 0.2452830188679245
+        },
+        "rougeL": {
+          "precision": 0.43243243243243246,
+          "recall": 0.22535211267605634,
+          "f1": 0.2962962962962963
+        }
+      },
+      {
+        "task_id": "Step 8: I am interested in the top sports available on Sport Odds. Can you provide me with the top sports menu, the static translations, and the top sport menu streaming? It would be great if you could also include the event types.",
+        "rouge1": {
+          "precision": 0.36363636363636365,
+          "recall": 0.1276595744680851,
+          "f1": 0.1889763779527559
+        },
+        "rouge2": {
+          "precision": 0.21875,
+          "recall": 0.07526881720430108,
+          "f1": 0.112
+        },
+        "rougeL": {
+          "precision": 0.3333333333333333,
+          "recall": 0.11702127659574468,
+          "f1": 0.1732283464566929
+        }
+      },
+      {
+        "task_id": "Step 9: I'm starting a new business venture and I need to make a speech announcing the new venture. Can you provide me with some quotes and words to start with? Additionally, I would like to gather news articles about successful entrepreneurs for inspiration. Your assistance would be highly valued.",
+        "rouge1": {
+          "precision": 0.6060606060606061,
+          "recall": 0.18518518518518517,
+          "f1": 0.2836879432624113
+        },
+        "rouge2": {
+          "precision": 0.21875,
+          "recall": 0.06542056074766354,
+          "f1": 0.10071942446043164
+        },
+        "rougeL": {
+          "precision": 0.36363636363636365,
+          "recall": 0.1111111111111111,
+          "f1": 0.1702127659574468
+        }
+      },
+      {
+        "task_id": "Step 9: I'm planning a surprise party for my colleague who is leaving the company. Can you suggest some office-friendly pranks and provide me with some funny quotes to include in the farewell card? Additionally, find a nearby restaurant that can accommodate a large group for the party. Also, recommend some farewell gifts for our colleague.",
+        "rouge1": {
+          "precision": 0.38181818181818183,
+          "recall": 0.23863636363636365,
+          "f1": 0.29370629370629375
+        },
+        "rouge2": {
+          "precision": 0.05555555555555555,
+          "recall": 0.034482758620689655,
+          "f1": 0.0425531914893617
+        },
+        "rougeL": {
+          "precision": 0.21818181818181817,
+          "recall": 0.13636363636363635,
+          "f1": 0.16783216783216784
+        }
+      },
+      {
+        "task_id": "Step 4: Retrieve the Gulag leaderboard for the top 2000 players. Furthermore, fetch the news articles and the featured shops in Rocket League.",
+        "rouge1": {
+          "precision": 0.5849056603773585,
+          "recall": 0.31313131313131315,
+          "f1": 0.40789473684210525
+        },
+        "rouge2": {
+          "precision": 0.38461538461538464,
+          "recall": 0.20408163265306123,
+          "f1": 0.26666666666666666
+        },
+        "rougeL": {
+          "precision": 0.37735849056603776,
+          "recall": 0.20202020202020202,
+          "f1": 0.26315789473684215
+        }
+      },
+      {
+        "task_id": "Step 6: I'm conducting a research project that involves analyzing the boundaries of postal codes and hexagons. Can you provide me with the hexagon boundary for the H3 index '613257753791561700'? Additionally, I'll need the boundaries of the LDU postal code 'L0R 1B7'.",
+        "rouge1": {
+          "precision": 0.71875,
+          "recall": 0.11330049261083744,
+          "f1": 0.19574468085106383
+        },
+        "rouge2": {
+          "precision": 0.41935483870967744,
+          "recall": 0.06435643564356436,
+          "f1": 0.11158798283261803
+        },
+        "rougeL": {
+          "precision": 0.5625,
+          "recall": 0.08866995073891626,
+          "f1": 0.15319148936170213
+        }
+      },
+      {
+        "task_id": "Step 4: My company is experiencing network issues and I suspect it's related to the DNS records. Can you perform a reverse DNS lookup for the IP address '192.168.1.1' and provide me with the name servers associated with it? Additionally, I need to perform a traceroute to 'example.com' to diagnose any network connectivity issues.",
+        "rouge1": {
+          "precision": 0.6078431372549019,
+          "recall": 0.2767857142857143,
+          "f1": 0.38036809815950917
+        },
+        "rouge2": {
+          "precision": 0.34,
+          "recall": 0.15315315315315314,
+          "f1": 0.2111801242236025
+        },
+        "rougeL": {
+          "precision": 0.35294117647058826,
+          "recall": 0.16071428571428573,
+          "f1": 0.22085889570552147
+        }
+      },
+      {
+        "task_id": "Step 9: I'm planning a movie night and would like to create a playlist of YouTube videos. Search for 'movie trailers' on YouTube and retrieve the search results, including snippets and IDs. Then, fetch the videos from the search results and add them to a playlist. Provide the playlist details, including the snippets.",
+        "rouge1": {
+          "precision": 0.6170212765957447,
+          "recall": 0.25892857142857145,
+          "f1": 0.36477987421383645
+        },
+        "rouge2": {
+          "precision": 0.32608695652173914,
+          "recall": 0.13513513513513514,
+          "f1": 0.1910828025477707
+        },
+        "rougeL": {
+          "precision": 0.574468085106383,
+          "recall": 0.24107142857142858,
+          "f1": 0.33962264150943394
+        }
+      },
+      {
+        "task_id": "Step 7: Get all the highlights from the user with the ID 'highlight:17984140099768575'. Please provide me with the download links for each highlight. Also, fetch the user information for the user with the ID 'highlight:17984140099768575', including their username, profile picture, full name, and the number of posts, followers, and following.",
+        "rouge1": {
+          "precision": 0.4067796610169492,
+          "recall": 0.21052631578947367,
+          "f1": 0.27745664739884396
+        },
+        "rouge2": {
+          "precision": 0.13793103448275862,
+          "recall": 0.07079646017699115,
+          "f1": 0.0935672514619883
+        },
+        "rougeL": {
+          "precision": 0.2711864406779661,
+          "recall": 0.14035087719298245,
+          "f1": 0.18497109826589594
+        }
+      },
+      {
+        "task_id": "Step 7: I'm a financial analyst and I need to analyze the historical OHLC data for the EUR/USD currency pair. Can you fetch the OHLC history for the past month? Additionally, I would like to retrieve the latest prices for BTC, USD, AR, ETH, and BNB cryptocurrencies.",
+        "rouge1": {
+          "precision": 0.8333333333333334,
+          "recall": 0.31746031746031744,
+          "f1": 0.45977011494252873
+        },
+        "rouge2": {
+          "precision": 0.5319148936170213,
+          "recall": 0.2,
+          "f1": 0.29069767441860467
+        },
+        "rougeL": {
+          "precision": 0.5833333333333334,
+          "recall": 0.2222222222222222,
+          "f1": 0.3218390804597701
+        }
+      },
+      {
+        "task_id": "Step 7: I recently moved to a new apartment in Manchester. Can you help me find the nearest grocery stores and pharmacies? It would be great if you could provide their addresses and geolocation coordinates as well.",
+        "rouge1": {
+          "precision": 0.6610169491525424,
+          "recall": 0.20634920634920634,
+          "f1": 0.3145161290322581
+        },
+        "rouge2": {
+          "precision": 0.3103448275862069,
+          "recall": 0.09574468085106383,
+          "f1": 0.14634146341463414
+        },
+        "rougeL": {
+          "precision": 0.4915254237288136,
+          "recall": 0.15343915343915343,
+          "f1": 0.23387096774193544
+        }
+      },
+      {
+        "task_id": "Step 10: I am planning a trip to a foreign country and I need some information. Can you provide me with the country code, capital, population, language, currency, and timezone of the country? Additionally, can you convert the country name to its corresponding country code?",
+        "rouge1": {
+          "precision": 0.76,
+          "recall": 0.4810126582278481,
+          "f1": 0.5891472868217054
+        },
+        "rouge2": {
+          "precision": 0.4489795918367347,
+          "recall": 0.28205128205128205,
+          "f1": 0.3464566929133859
+        },
+        "rougeL": {
+          "precision": 0.6,
+          "recall": 0.379746835443038,
+          "f1": 0.46511627906976744
+        }
+      },
+      {
+        "task_id": "Step 11: Get the number of likes for the latest football posts on Instagram. Also, retrieve the current feed from the username 'therock' and provide the raw unprocessed data feed.",
+        "rouge1": {
+          "precision": 0.42592592592592593,
+          "recall": 0.25274725274725274,
+          "f1": 0.31724137931034485
+        },
+        "rouge2": {
+          "precision": 0.1509433962264151,
+          "recall": 0.08888888888888889,
+          "f1": 0.11188811188811189
+        },
+        "rougeL": {
+          "precision": 0.25925925925925924,
+          "recall": 0.15384615384615385,
+          "f1": 0.19310344827586207
+        }
+      },
+      {
+        "task_id": "Step 5: Can you help me find similar products to the one with id 12345? I would like to see the brand name, color, price, and images of each similar product. Please use the products/v3/list-similarities API.",
+        "rouge1": {
+          "precision": 0.49056603773584906,
+          "recall": 0.41935483870967744,
+          "f1": 0.45217391304347826
+        },
+        "rouge2": {
+          "precision": 0.25,
+          "recall": 0.21311475409836064,
+          "f1": 0.2300884955752212
+        },
+        "rougeL": {
+          "precision": 0.24528301886792453,
+          "recall": 0.20967741935483872,
+          "f1": 0.22608695652173913
+        }
+      },
+      {
+        "task_id": "Step 7: My company is organizing a League of Legends event and we need to know the schedule for the leagues. Can you fetch the schedule for the leagues with IDs 98767991299243165, 99332500638116286, and 98767991302996019? Additionally, we would like to know the teams and players participating in these matches. Please fetch the teams and players for us.",
+        "rouge1": {
+          "precision": 0.7083333333333334,
+          "recall": 0.2786885245901639,
+          "f1": 0.39999999999999997
+        },
+        "rouge2": {
+          "precision": 0.3404255319148936,
+          "recall": 0.1322314049586777,
+          "f1": 0.1904761904761905
+        },
+        "rougeL": {
+          "precision": 0.5,
+          "recall": 0.19672131147540983,
+          "f1": 0.2823529411764706
+        }
+      },
+      {
+        "task_id": "Step 6: I'm interested in increasing my positive quotient. Can you give me the questionnaire for the Positive Quotient Personality Test? Additionally, I would like to explore the DISC Personality Test. Please provide me with the questionnaire for that as well. Thank you!",
+        "rouge1": {
+          "precision": 0.6444444444444445,
+          "recall": 0.17365269461077845,
+          "f1": 0.27358490566037735
+        },
+        "rouge2": {
+          "precision": 0.3409090909090909,
+          "recall": 0.09036144578313253,
+          "f1": 0.14285714285714285
+        },
+        "rougeL": {
+          "precision": 0.5111111111111111,
+          "recall": 0.1377245508982036,
+          "f1": 0.21698113207547173
+        }
+      },
+      {
+        "task_id": "Step 7: I'm organizing a company event and want to entertain the attendees with some funny YouTube videos. Can you recommend some popular comedy videos on YouTube? Also, help me convert the license plate 'S8TAN' from Alabama to its corresponding VIN number.",
+        "rouge1": {
+          "precision": 0.75,
+          "recall": 0.3626373626373626,
+          "f1": 0.4888888888888888
+        },
+        "rouge2": {
+          "precision": 0.37209302325581395,
+          "recall": 0.17777777777777778,
+          "f1": 0.2406015037593985
+        },
+        "rougeL": {
+          "precision": 0.45454545454545453,
+          "recall": 0.21978021978021978,
+          "f1": 0.2962962962962963
+        }
+      },
+      {
+        "task_id": "Step 5: I'm looking for a new place to live and I need some information about potential neighborhoods. Can you suggest some neighborhoods in New York City and provide map tiles with English labels for each neighborhood? Furthermore, I would like to find nearby schools and parks in each neighborhood.",
+        "rouge1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.28205128205128205,
+          "f1": 0.3963963963963964
+        },
+        "rouge2": {
+          "precision": 0.28125,
+          "recall": 0.11688311688311688,
+          "f1": 0.1651376146788991
+        },
+        "rougeL": {
+          "precision": 0.5151515151515151,
+          "recall": 0.21794871794871795,
+          "f1": 0.3063063063063063
+        }
+      },
+      {
+        "task_id": "Step 4: I am planning a family vacation to a beach destination and I want to explore popular beach highlights on Instagram. Can you provide me with the details of the highlight items for the 'beach' highlight of the Instagram profile 'kimkardashian'? Additionally, can you fetch the video info for a popular TikTok video with the URL 'https://www.tiktok.com/@tiktok/video/6974862859000073478' and also get the hashtag info for the hashtag 'bts'?",
+        "rouge1": {
+          "precision": 0.6595744680851063,
+          "recall": 0.34831460674157305,
+          "f1": 0.4558823529411765
+        },
+        "rouge2": {
+          "precision": 0.32608695652173914,
+          "recall": 0.17045454545454544,
+          "f1": 0.22388059701492538
+        },
+        "rougeL": {
+          "precision": 0.48936170212765956,
+          "recall": 0.25842696629213485,
+          "f1": 0.338235294117647
+        }
+      },
+      {
+        "task_id": "Step 12: I'm organizing a charity event and I need to calculate the tax rates for donations. Can you retrieve the tax rates applicable to my location using the address '123 Charity Avenue, Los Angeles, CA'? Additionally, I would like to obtain the ESG scores for some companies to ensure they align with our values.",
+        "rouge1": {
+          "precision": 0.5294117647058824,
+          "recall": 0.20149253731343283,
+          "f1": 0.2918918918918919
+        },
+        "rouge2": {
+          "precision": 0.2,
+          "recall": 0.07518796992481203,
+          "f1": 0.1092896174863388
+        },
+        "rougeL": {
+          "precision": 0.4117647058823529,
+          "recall": 0.15671641791044777,
+          "f1": 0.227027027027027
+        }
+      },
+      {
+        "task_id": "Step 9: Can you provide me with tweets that mention the user with the username 'cristiano'? I want to see tweets that have at least 100 replies and 50 retweets. Please make sure the tweets are in English.",
+        "rouge1": {
+          "precision": 0.5,
+          "recall": 0.22033898305084745,
+          "f1": 0.3058823529411765
+        },
+        "rouge2": {
+          "precision": 0.23529411764705882,
+          "recall": 0.10256410256410256,
+          "f1": 0.14285714285714282
+        },
+        "rougeL": {
+          "precision": 0.4230769230769231,
+          "recall": 0.1864406779661017,
+          "f1": 0.25882352941176473
+        }
+      },
+      {
+        "task_id": "Step 8: I'm developing a phone system and I need some audio messages for the on-hold feature. Can you recommend an API that provides a variety of on-hold audio messages? Additionally, provide me with an API that can retrieve the current location of a phone call using the caller's phone number.",
+        "rouge1": {
+          "precision": 0.4642857142857143,
+          "recall": 0.2524271844660194,
+          "f1": 0.3270440251572327
+        },
+        "rouge2": {
+          "precision": 0.10909090909090909,
+          "recall": 0.058823529411764705,
+          "f1": 0.07643312101910828
+        },
+        "rougeL": {
+          "precision": 0.35714285714285715,
+          "recall": 0.1941747572815534,
+          "f1": 0.25157232704402516
+        }
+      },
+      {
+        "task_id": "Step 9: I want to surprise my family with a weekend getaway to a nearby city. Can you search for available trips from our city to other cities on a specific date? Please include details about the departure and arrival stations, duration, and fares. Additionally, I would like to know if there are any public holidays during that time.",
+        "rouge1": {
+          "precision": 0.43137254901960786,
+          "recall": 0.25287356321839083,
+          "f1": 0.31884057971014496
+        },
+        "rouge2": {
+          "precision": 0.16,
+          "recall": 0.09302325581395349,
+          "f1": 0.11764705882352942
+        },
+        "rougeL": {
+          "precision": 0.37254901960784315,
+          "recall": 0.21839080459770116,
+          "f1": 0.2753623188405797
+        }
+      },
+      {
+        "task_id": "Step 9: I'm looking for some movie recommendations for my upcoming date night. Can you provide me with four related movies to watch? Also, fetch the list of favorite libraries for user 1 from the Python Libraries tst API.",
+        "rouge1": {
+          "precision": 0.7105263157894737,
+          "recall": 0.27835051546391754,
+          "f1": 0.39999999999999997
+        },
+        "rouge2": {
+          "precision": 0.5405405405405406,
+          "recall": 0.20833333333333334,
+          "f1": 0.30075187969924816
+        },
+        "rougeL": {
+          "precision": 0.5789473684210527,
+          "recall": 0.2268041237113402,
+          "f1": 0.32592592592592595
+        }
+      },
+      {
+        "task_id": "Step 7: I need complete SERP data for my company's website. Create a task using the Get SERP Async API to retrieve the data. Also, check the SSL information for our domain using the SSL Snitch API.",
+        "rouge1": {
+          "precision": 0.6304347826086957,
+          "recall": 0.3493975903614458,
+          "f1": 0.4496124031007752
+        },
+        "rouge2": {
+          "precision": 0.3111111111111111,
+          "recall": 0.17073170731707318,
+          "f1": 0.2204724409448819
+        },
+        "rougeL": {
+          "precision": 0.5652173913043478,
+          "recall": 0.3132530120481928,
+          "f1": 0.40310077519379844
+        }
+      },
+      {
+        "task_id": "Step 6: I'm a music lover and I want to explore different genres. Can you provide me with the editorial details of the playlist with the ID 54321 from the Deezer API? Additionally, fetch the basic user information of the artist from the Soundcloud API.",
+        "rouge1": {
+          "precision": 0.4528301886792453,
+          "recall": 0.3116883116883117,
+          "f1": 0.3692307692307692
+        },
+        "rouge2": {
+          "precision": 0.23076923076923078,
+          "recall": 0.15789473684210525,
+          "f1": 0.18749999999999997
+        },
+        "rougeL": {
+          "precision": 0.3018867924528302,
+          "recall": 0.2077922077922078,
+          "f1": 0.24615384615384614
+        }
+      },
+      {
+        "task_id": "Step 5: I'm curious to know the current trends in climate change news. Can you provide me with recent news articles about climate change? Additionally, I would like to fetch the recent 50 news articles.",
+        "rouge1": {
+          "precision": 0.5,
+          "recall": 0.3132530120481928,
+          "f1": 0.3851851851851852
+        },
+        "rouge2": {
+          "precision": 0.17647058823529413,
+          "recall": 0.10975609756097561,
+          "f1": 0.13533834586466165
+        },
+        "rougeL": {
+          "precision": 0.3269230769230769,
+          "recall": 0.20481927710843373,
+          "f1": 0.2518518518518518
+        }
+      },
+      {
+        "task_id": "Step 6: I want to create a multilingual user interface for my application. Can you provide me with a list of languages supported by the LanguageTool API and the Microsoft Translator Text API? Additionally, I would like to search for translations of a specific sentence using the MyMemory - Translation Memory API and the Simple & Elegant Translation Service API.",
+        "rouge1": {
+          "precision": 0.2833333333333333,
+          "recall": 0.21518987341772153,
+          "f1": 0.2446043165467626
+        },
+        "rouge2": {
+          "precision": 0.01694915254237288,
+          "recall": 0.01282051282051282,
+          "f1": 0.014598540145985401
+        },
+        "rougeL": {
+          "precision": 0.2,
+          "recall": 0.1518987341772152,
+          "f1": 0.17266187050359713
+        }
+      },
+      {
+        "task_id": "Step 9: I am a student studying personal growth and I am looking for books on this topic. Can you provide me with a paginated list of books related to personal growth? Additionally, I would like to know the details of a specific book with ID 100.",
+        "rouge1": {
+          "precision": 0.7045454545454546,
+          "recall": 0.30392156862745096,
+          "f1": 0.42465753424657526
+        },
+        "rouge2": {
+          "precision": 0.3953488372093023,
+          "recall": 0.16831683168316833,
+          "f1": 0.23611111111111116
+        },
+        "rougeL": {
+          "precision": 0.5227272727272727,
+          "recall": 0.22549019607843138,
+          "f1": 0.31506849315068497
+        }
+      },
+      {
+        "task_id": "Step 4: I am curious to know the details of an Instagram post. Could you please provide me with the media info, caption, and download link for the post with the URL 'https://www.instagram.com/p/CqIbCzYMi5C/'? Additionally, fetch the username and user ID for the user ID 18527.",
+        "rouge1": {
+          "precision": 0.275,
+          "recall": 0.14864864864864866,
+          "f1": 0.19298245614035087
+        },
+        "rouge2": {
+          "precision": 0.02564102564102564,
+          "recall": 0.0136986301369863,
+          "f1": 0.017857142857142856
+        },
+        "rougeL": {
+          "precision": 0.25,
+          "recall": 0.13513513513513514,
+          "f1": 0.1754385964912281
+        }
+      },
+      {
+        "task_id": "Step 5: I am a big fan of classic movies. Can you search for the top 10 classic movies? Please provide details such as the name, size, seeders, leechers, and the upload date for each movie. Also, include the magnet link for each movie. Furthermore, it would be helpful to know the available torrent sources for the 'TorrentHunt' tool.",
+        "rouge1": {
+          "precision": 0.5434782608695652,
+          "recall": 0.2808988764044944,
+          "f1": 0.3703703703703704
+        },
+        "rouge2": {
+          "precision": 0.24444444444444444,
+          "recall": 0.125,
+          "f1": 0.16541353383458646
+        },
+        "rougeL": {
+          "precision": 0.45652173913043476,
+          "recall": 0.23595505617977527,
+          "f1": 0.3111111111111111
+        }
+      },
+      {
+        "task_id": "Step 9: I'm organizing a fundraising event for a charity and I need to promote it online. Can you suggest some effective strategies to increase online visibility and attract more participants? Also, provide me with relevant web pages and images of successful charity events.",
+        "rouge1": {
+          "precision": 0.43137254901960786,
+          "recall": 0.125,
+          "f1": 0.19383259911894274
+        },
+        "rouge2": {
+          "precision": 0.08,
+          "recall": 0.022857142857142857,
+          "f1": 0.035555555555555556
+        },
+        "rougeL": {
+          "precision": 0.2549019607843137,
+          "recall": 0.07386363636363637,
+          "f1": 0.11453744493392072
+        }
+      },
+      {
+        "task_id": "Step 11: I want to surprise my friends with a Euro trip. Can you help me find the cheapest flights from London to Paris? Also, provide me with the available hotel options in Paris and the distance between these two cities.",
+        "rouge1": {
+          "precision": 0.6078431372549019,
+          "recall": 0.24031007751937986,
+          "f1": 0.3444444444444445
+        },
+        "rouge2": {
+          "precision": 0.26,
+          "recall": 0.1015625,
+          "f1": 0.14606741573033707
+        },
+        "rougeL": {
+          "precision": 0.39215686274509803,
+          "recall": 0.15503875968992248,
+          "f1": 0.2222222222222222
+        }
+      },
+      {
+        "task_id": "Step 5: I'm a teacher planning a space-themed lesson for my students. Can you give me some jokes about manatees to make the class more enjoyable? Additionally, provide information about the planet with the longest orbital period in Earth days.",
+        "rouge1": {
+          "precision": 0.6521739130434783,
+          "recall": 0.2830188679245283,
+          "f1": 0.3947368421052632
+        },
+        "rouge2": {
+          "precision": 0.3333333333333333,
+          "recall": 0.14285714285714285,
+          "f1": 0.2
+        },
+        "rougeL": {
+          "precision": 0.45652173913043476,
+          "recall": 0.19811320754716982,
+          "f1": 0.2763157894736842
+        }
+      },
+      {
+        "task_id": "Step 11: Can you help me gather the key metrics for the company '123XYZ'? Retrieve the reports for this company and provide me with the stock price for 'TATAMOTORS'. Also, check the exchange status to ensure trading is active.",
+        "rouge1": {
+          "precision": 0.5555555555555556,
+          "recall": 0.14084507042253522,
+          "f1": 0.2247191011235955
+        },
+        "rouge2": {
+          "precision": 0.23529411764705882,
+          "recall": 0.05714285714285714,
+          "f1": 0.09195402298850573
+        },
+        "rougeL": {
+          "precision": 0.4444444444444444,
+          "recall": 0.11267605633802817,
+          "f1": 0.17977528089887643
+        }
+      },
+      {
+        "task_id": "Step 7: I'm working on a project exploring global population trends. Can you provide me with the population data for each decade? It would be helpful to have the growth rate as well.",
+        "rouge1": {
+          "precision": 0.12727272727272726,
+          "recall": 0.027237354085603113,
+          "f1": 0.044871794871794865
+        },
+        "rouge2": {
+          "precision": 0.018518518518518517,
+          "recall": 0.00390625,
+          "f1": 0.0064516129032258064
+        },
+        "rougeL": {
+          "precision": 0.09090909090909091,
+          "recall": 0.019455252918287938,
+          "f1": 0.032051282051282055
+        }
+      },
+      {
+        "task_id": "Step 9: I'm curious about the pageant contests that took place in a specific country. Can you search for the country and provide me with the details of the contests held there, including the winners' names and the number of entrants?",
+        "rouge1": {
+          "precision": 0.6923076923076923,
+          "recall": 0.3711340206185567,
+          "f1": 0.4832214765100672
+        },
+        "rouge2": {
+          "precision": 0.39215686274509803,
+          "recall": 0.20833333333333334,
+          "f1": 0.272108843537415
+        },
+        "rougeL": {
+          "precision": 0.3076923076923077,
+          "recall": 0.16494845360824742,
+          "f1": 0.21476510067114093
+        }
+      },
+      {
+        "task_id": "Step 4: I'm curious about the positions of the Sun, Moon, and Uranus for the date range from 2023-03-01 to 2023-03-10. Can you provide me with that information? Also, give me a list of stars and deep space objects visible from my location with latitude 40.7128 and longitude -74.0060 during the same period.",
+        "rouge1": {
+          "precision": 0.7333333333333333,
+          "recall": 0.18803418803418803,
+          "f1": 0.29931972789115646
+        },
+        "rouge2": {
+          "precision": 0.3793103448275862,
+          "recall": 0.09482758620689655,
+          "f1": 0.15172413793103445
+        },
+        "rougeL": {
+          "precision": 0.6,
+          "recall": 0.15384615384615385,
+          "f1": 0.2448979591836735
+        }
+      },
+      {
+        "task_id": "Step 5: I am planning a cheese tasting event for my company and I need a list of all the available cheeses. Can you provide me with the names, regions, and descriptions of the cheeses? It would be great if I could also get the images of each cheese to include in the event brochure.",
+        "rouge1": {
+          "precision": 0.5217391304347826,
+          "recall": 0.375,
+          "f1": 0.43636363636363634
+        },
+        "rouge2": {
+          "precision": 0.26666666666666666,
+          "recall": 0.19047619047619047,
+          "f1": 0.2222222222222222
+        },
+        "rougeL": {
+          "precision": 0.391304347826087,
+          "recall": 0.28125,
+          "f1": 0.3272727272727273
+        }
+      },
+      {
+        "task_id": "Step 9: I want to gather information about the MacBook. Can you fetch the search results for 'Mac' on Amazon? Also, provide me with the product details, reviews, and offers for the product with ID B00K3OM3PS.",
+        "rouge1": {
+          "precision": 0.4406779661016949,
+          "recall": 0.23214285714285715,
+          "f1": 0.30409356725146197
+        },
+        "rouge2": {
+          "precision": 0.13793103448275862,
+          "recall": 0.07207207207207207,
+          "f1": 0.09467455621301775
+        },
+        "rougeL": {
+          "precision": 0.288135593220339,
+          "recall": 0.15178571428571427,
+          "f1": 0.19883040935672514
+        }
+      },
+      {
+        "task_id": "Step 4: Please provide me with the details of the pet with ID 135. Additionally, fetch the inventory status and the order details for the same pet.",
+        "rouge1": {
+          "precision": 0.45454545454545453,
+          "recall": 0.2717391304347826,
+          "f1": 0.34013605442176875
+        },
+        "rouge2": {
+          "precision": 0.2037037037037037,
+          "recall": 0.12087912087912088,
+          "f1": 0.15172413793103448
+        },
+        "rougeL": {
+          "precision": 0.3090909090909091,
+          "recall": 0.18478260869565216,
+          "f1": 0.23129251700680273
+        }
+      },
+      {
+        "task_id": "Step 11: I need to create a new shortened link for my company's website. Can you generate a branded short link for me using the URL Link Shortener tool? Additionally, I would like to know a random number fact and retrieve information about a specific user with ID 789 using the user endpoint tool.",
+        "rouge1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.39080459770114945,
+          "f1": 0.4927536231884057
+        },
+        "rouge2": {
+          "precision": 0.38,
+          "recall": 0.22093023255813954,
+          "f1": 0.27941176470588236
+        },
+        "rougeL": {
+          "precision": 0.49019607843137253,
+          "recall": 0.28735632183908044,
+          "f1": 0.36231884057971014
+        }
+      },
+      {
+        "task_id": "Step 5: I'm a web developer and I need to parse some data for a project. Can you assist me with parsing the data using the 5ka_Porocila API? Additionally, I want to check the health status of the API to ensure it's functioning properly. Finally, find me the details of a specific domain name using the DOMAINE nc API.",
+        "rouge1": {
+          "precision": 0.47058823529411764,
+          "recall": 0.2222222222222222,
+          "f1": 0.3018867924528302
+        },
+        "rouge2": {
+          "precision": 0.2,
+          "recall": 0.09345794392523364,
+          "f1": 0.1273885350318471
+        },
+        "rougeL": {
+          "precision": 0.35294117647058826,
+          "recall": 0.16666666666666666,
+          "f1": 0.22641509433962262
+        }
+      }
+    ]
+  },
+  "bertscore": {
+    "n": 100,
+    "model_type": "microsoft/deberta-xlarge-mnli",
+    "baseline_rescaling": false,
+    "scores": {
+      "precision": 0.6430363705754281,
+      "recall": 0.535219298005104,
+      "f1": 0.5827744680643082
+    },
+    "per_task": [
+      {
+        "task_id": "Step 5: I'm organizing a business trip to attend a conference in Tokyo. Help me find the best flight options from London to Tokyo with a flexible return date. Additionally, provide me with a list of hotels near the conference venue and the current exchange rate for GBP to JPY.",
+        "precision": 0.7426443099975586,
+        "recall": 0.6287248730659485,
+        "f1": 0.6809529662132263
+      },
+      {
+        "task_id": "Step 8: I'm compiling a comprehensive database of VCT teams. Please provide me with the team names, player names, roles, roster status, contact details, and resident status for teams in all regions.",
+        "precision": 0.5625107884407043,
+        "recall": 0.37578117847442627,
+        "f1": 0.4505654573440552
+      },
+      {
+        "task_id": "Step 5: I'm planning a trip to New York and I need some information about the upcoming football matches. Can you provide me with the predictions for the next 48 hours? Additionally, I'm interested in finding job opportunities in the tech industry. Could you search for Python developer jobs in New York? Also, fetch me some estimated salaries for these jobs.",
+        "precision": 0.6660418510437012,
+        "recall": 0.6076322793960571,
+        "f1": 0.6354977488517761
+      },
+      {
+        "task_id": "Step 4: I want to surprise my partner with a homemade birthday cake. Can you give me a list of cake options along with their images? Also, I need the detailed recipe for cake ID 5, including the ingredients and step-by-step method.",
+        "precision": 0.8268669843673706,
+        "recall": 0.715522050857544,
+        "f1": 0.7671754956245422
+      },
+      {
+        "task_id": "Step 5: I'm a music lover and I'm looking for some new tracks to add to my playlist. Can you provide me with the Finland Songs chart information on Billboard-API and the radio object for the ID 'radio123' on Deezer? Also, find the latest release of the artist with the ID '567072' on Shazam.",
+        "precision": 0.8010786771774292,
+        "recall": 0.7288166880607605,
+        "f1": 0.763241171836853
+      },
+      {
+        "task_id": "Step 7: Please give me the price data for the DJI index over the past 7 days and the top 5 worst performers for this index. I need this information for my investment analysis.",
+        "precision": 0.5887723565101624,
+        "recall": 0.49826937913894653,
+        "f1": 0.5397533774375916
+      },
+      {
+        "task_id": "Step 7: I'm a huge fan of Hearthstone and I want to expand my card collection. Can you help me find all the legendary cards and provide me with their details? Additionally, fetch me some information about the top Diablo 4 influencers and players to inspire me in my gaming journey.",
+        "precision": 0.6720514297485352,
+        "recall": 0.5675007700920105,
+        "f1": 0.6153668761253357
+      },
+      {
+        "task_id": "Step 6: I want to plan a movie night with my friends and watch some romance movies. Can you recommend some popular romance movies released today? Also, provide me with a random quote from an anime.",
+        "precision": 0.6480832099914551,
+        "recall": 0.5853163599967957,
+        "f1": 0.6151026487350464
+      },
+      {
+        "task_id": "Step 7: I am a film student and I need to research the latest trends and developments in the film industry. Can you provide me with recent movie news articles to keep me updated? Additionally, suggest some popular combinations of keywords that have been cited by news agencies in recent articles. Also, share the 100 most recent articles and their keywords to help me gather relevant information for my research.",
+        "precision": 0.7190344929695129,
+        "recall": 0.6349298357963562,
+        "f1": 0.6743699908256531
+      },
+      {
+        "task_id": "Step 4: I am planning a road trip and I need to find airports along my route. Can you provide me with a list of airports that match the keyword 'California'? Additionally, I would like to know the makes and models of vehicles available for rent in California. Finally, could you give me some information about the tool 'CarbonSutra'?",
+        "precision": 0.5228471755981445,
+        "recall": 0.49385321140289307,
+        "f1": 0.5079367756843567
+      },
+      {
+        "task_id": "Step 4: I want to search for images related to 'liverpool' on the internet. Can you fetch the top 20 image search results? Additionally, show me the top search results for 'interesting facts about Liverpool'.",
+        "precision": 0.5387314558029175,
+        "recall": 0.4714527130126953,
+        "f1": 0.5028517246246338
+      },
+      {
+        "task_id": "Step 6: Tell me a random quote from the book 'Quiet'. Moreover, I would like to receive a random quote tagged with 'money'.",
+        "precision": 0.604446291923523,
+        "recall": 0.44438469409942627,
+        "f1": 0.5122020244598389
+      },
+      {
+        "task_id": "Step 4: I'm planning a movie night with my family and we need some show recommendations. Can you provide me with the list of shows currently available on Burning Series? Additionally, fetch a random hobby from the 'general' category using the Hobbies by API-Ninjas.",
+        "precision": 0.5386136174201965,
+        "recall": 0.35272902250289917,
+        "f1": 0.4262886941432953
+      },
+      {
+        "task_id": "Step 11: I'm a golf enthusiast and I want to stay updated on the latest rankings. Can you fetch the world rankings for the year 2022? I'm interested in knowing the top players and their previous ranks as well. Additionally, I want to get the FedExCup ranking leaderboard for the same year. Thanks!",
+        "precision": 0.6469755172729492,
+        "recall": 0.5589317083358765,
+        "f1": 0.5997395515441895
+      },
+      {
+        "task_id": "Step 6: I'm planning a surprise party for my best friend's birthday next month. Can you help me find the top posts and comments made by my friend on Reddit? It would be great to include some trending memes from the subreddit they frequent as well. Also, check if their username is available on Behence and 9gag.",
+        "precision": 0.7021483182907104,
+        "recall": 0.5848803520202637,
+        "f1": 0.638171911239624
+      },
+      {
+        "task_id": "Step 10: I am planning a road trip with my friends and we need to rent a car. Can you search for available car rental options in our location and provide me with a list of options along with their prices, ratings, and images? Additionally, I would like to explore some travel accessories for our road trip. Please show me the travel accessories available in the database.",
+        "precision": 0.4793265759944916,
+        "recall": 0.4840700030326843,
+        "f1": 0.48168662190437317
+      },
+      {
+        "task_id": "Step 5: I'm a developer working on a messaging app and I need to retrieve the messages sent by users. Can you help me fetch the message history and provide me with the message content and timestamps? Additionally, I would like to get the pricing information for sending SMS in different countries.",
+        "precision": 0.599713921546936,
+        "recall": 0.4988327622413635,
+        "f1": 0.5446413159370422
+      },
+      {
+        "task_id": "Step 9: I'm a climate change researcher and I need access to a wide range of climate change news articles. Can you fetch all the climate change news from top news sites and also provide news from individual sources like The Guardian?",
+        "precision": 0.5945912599563599,
+        "recall": 0.5074520707130432,
+        "f1": 0.5475766062736511
+      },
+      {
+        "task_id": "Step 4: I'm throwing a number-themed party and I need some interesting facts to entertain my guests. Can you provide a trivia fact about the number 42? Additionally, I'd like to explore some albums by a specific artist. Could you fetch the details of an album with the ID XYZ123? And to add some humor to the event, a random Chuck Norris joke would be perfect.",
+        "precision": 0.5527175664901733,
+        "recall": 0.4849327504634857,
+        "f1": 0.5166110992431641
+      },
+      {
+        "task_id": "Step 5: I'm hosting a game night with my friends and I need some hilarious jokes to keep everyone entertained. Can you find a joke related to board games? Also, recommend a good pizza place for dinner. It would be great if you could provide some interesting facts about the pizza place's history.",
+        "precision": 0.7536166906356812,
+        "recall": 0.6649265289306641,
+        "f1": 0.7064990401268005
+      },
+      {
+        "task_id": "Step 5: I'm planning a trip to Europe and I need to know the exchange rates for different currencies. Can you provide me with the latest exchange rates for USD, EUR, GBP, and CHF? Additionally, convert 500 USD to EUR using the latest rates.",
+        "precision": 0.7904953956604004,
+        "recall": 0.781649112701416,
+        "f1": 0.7860473394393921
+      },
+      {
+        "task_id": "Step 6: Can you provide me with the individual result of a robbery incident with ID 10? I need details such as the city, address, latitude, longitude, zip code, arms used, crime name, incident ID, and place of crime. Additionally, I would like to access all the available data of robbery incidents.",
+        "precision": 0.6241127252578735,
+        "recall": 0.4518347680568695,
+        "f1": 0.5241813659667969
+      },
+      {
+        "task_id": "Step 9: I'm a music enthusiast and I want to explore the SongMeanings database to find interesting lyrics and artists. Can you help me search for artists using the query 'alternative rock'? Also, provide me with the list of songs associated with each artist.",
+        "precision": 0.6563012003898621,
+        "recall": 0.5901795029640198,
+        "f1": 0.6214865446090698
+      },
+      {
+        "task_id": "Step 7: I'm a journalist researching an article on the latest tech gadgets. Can you provide me with the full-text articles, images, and author information for the top trending tech news articles? I need the articles to be sorted by popularity and include the date of publication.",
+        "precision": 0.6646239161491394,
+        "recall": 0.5540453791618347,
+        "f1": 0.604317843914032
+      },
+      {
+        "task_id": "Step 10: I'm thinking of investing in ETFs and I need to analyze the risk and return. Can you fetch the risk return analysis in the Risk tab for a specific ETF? Additionally, provide me with the live price of a stock by symbol to compare with the ETF performance.",
+        "precision": 0.7150208950042725,
+        "recall": 0.3615979552268982,
+        "f1": 0.4803001284599304
+      },
+      {
+        "task_id": "Step 11: I'm organizing a corporate event and I need real-time updates on the stock market. Fetch the most recent 30 messages posted by verified Investor Relations customers. Also, retrieve the most recent 30 messages containing mentions of my company's handle. Additionally, provide me with the SPAC summary for GGPI.",
+        "precision": 0.6106443405151367,
+        "recall": 0.559803307056427,
+        "f1": 0.5841196179389954
+      },
+      {
+        "task_id": "Step 10: I want to check the availability of a pet with ID 789. Can you provide me with the details of the pet and its availability status?",
+        "precision": 0.5853251814842224,
+        "recall": 0.35393816232681274,
+        "f1": 0.4411306381225586
+      },
+      {
+        "task_id": "Step 6: I'm a car enthusiast and I'm curious about the average price and mileage for a BMW 5 series from 2012 in Poland and Australia. Can you provide me with this information? Also, I would like to know the top models in terms of average price and mileage.",
+        "precision": 0.6063029170036316,
+        "recall": 0.41884493827819824,
+        "f1": 0.49543464183807373
+      },
+      {
+        "task_id": "Step 6: My music playlist needs a fresh update. Give me the top country albums from the Greatest of All Time chart and suggest a playlist based on those albums. Additionally, provide me with an editorial object to read about the latest music trends.",
+        "precision": 0.640318751335144,
+        "recall": 0.5083173513412476,
+        "f1": 0.5667332410812378
+      },
+      {
+        "task_id": "Step 9: My family loves memes. Fetch the top trending memes from Reddit and also find out if my username is available on Patreon.",
+        "precision": 0.576003909111023,
+        "recall": 0.396857887506485,
+        "f1": 0.46993663907051086
+      },
+      {
+        "task_id": "Step 6: I'm planning a surprise party for my best friend's birthday. Can you suggest some entertaining jokes to make the party more enjoyable? Also, provide me with a random quote to inspire my friend on their special day.",
+        "precision": 0.6913402080535889,
+        "recall": 0.5697864294052124,
+        "f1": 0.6247053742408752
+      },
+      {
+        "task_id": "Step 6: I'm a financial analyst and I need to monitor the crypto market. Provide me with the top 5 articles from CoinTelegraph, CoinJournal, and CoinCu.",
+        "precision": 0.7097241878509521,
+        "recall": 0.6394484043121338,
+        "f1": 0.672756016254425
+      },
+      {
+        "task_id": "Step 4: I'm planning a trip to the United States and I would like to explore the restaurant scene. Can you provide me with a list of all the cities where I can find restaurants? Additionally, I need information about the restaurants in West Bloomfield, Michigan. Please give me the addresses, phone numbers, and websites of these restaurants.",
+        "precision": 0.5853130221366882,
+        "recall": 0.4821977913379669,
+        "f1": 0.5287752151489258
+      },
+      {
+        "task_id": "Step 4: My nephew is obsessed with Beyblades, and I want to surprise him with a special gift. Can you provide me with a list of Beyblades, including their product information and parts? Additionally, I would like to retrieve the details of a specific Beyblade with the ID 987.",
+        "precision": 0.5537362098693848,
+        "recall": 0.4782862663269043,
+        "f1": 0.5132532119750977
+      },
+      {
+        "task_id": "Step 6: I'm planning a hiking trip and I want to avoid any earthquakes along the trail. Fetch the latest earthquake data near the coordinates of the hiking trail using the Latest Earthquake Near Me API. Additionally, convert the mRNA sequence 'UACGUACG' into its DNA sequence equivalent using the mRNA2DNA API.",
+        "precision": 0.5168163180351257,
+        "recall": 0.42870032787323,
+        "f1": 0.4686524271965027
+      },
+      {
+        "task_id": "Step 6: I'm interested in the winning number sets for Cash4Life between January 1, 2023, and January 5, 2023. Can you also fetch the latest drawing and the random QuickPick number for the upcoming drawing?",
+        "precision": 0.7209824919700623,
+        "recall": 0.5934236645698547,
+        "f1": 0.6510134935379028
+      },
+      {
+        "task_id": "Step 7: I'm a travel blogger and I want to include the exchange rate from USD to GBP in my blog post. Can you provide me with the current exchange rate? Also, can you list all the available quotes for currency exchange?",
+        "precision": 0.6797448396682739,
+        "recall": 0.5321730375289917,
+        "f1": 0.59697425365448
+      },
+      {
+        "task_id": "Step 5: I'm a travel blogger and I'm writing an article about the best hidden gems in Europe. Can you provide me with a map image and some webcams for each hidden gem I mention in my article? This will make it more interactive and engaging for my readers.",
+        "precision": 0.8023694753646851,
+        "recall": 0.6736361980438232,
+        "f1": 0.7323889136314392
+      },
+      {
+        "task_id": "Step 7: My company is looking to expand our community on Socie. Can you retrieve the details of all the members in our community? Additionally, fetch the specific member with the identifier 123456 and display their information.",
+        "precision": 0.6730636954307556,
+        "recall": 0.5386650562286377,
+        "f1": 0.598410964012146
+      },
+      {
+        "task_id": "Step 7: I want to search for posts about technology in the subreddit 'news'. Can you provide the titles, authors, upvote ratios, and thumbnails of the posts? Furthermore, it would be helpful if you could search for comments related to the keyword 'innovation' in these posts and provide the usernames, comment bodies, upvotes, and created dates of the comments.",
+        "precision": 0.6537187695503235,
+        "recall": 0.5090007781982422,
+        "f1": 0.5723536610603333
+      },
+      {
+        "task_id": "Step 5: My company is organizing a team-building event in Los Angeles. Can you suggest some fun activities for the event? Also, find some local businesses that offer catering services and provide their contact details.",
+        "precision": 0.5850571393966675,
+        "recall": 0.5291010141372681,
+        "f1": 0.5556739568710327
+      },
+      {
+        "task_id": "Step 7: I'm a developer working on a travel app and I need access to a reliable weather API. Can you suggest some weather APIs that provide current weather data and forecasts? Additionally, provide information on how to integrate these APIs into my application.",
+        "precision": 0.6203677654266357,
+        "recall": 0.4452766478061676,
+        "f1": 0.5184380412101746
+      },
+      {
+        "task_id": "Step 10: I want to find some unique and creative items on Redbubble for my upcoming art project. Show me items related to 'abstract art' and 'watercolor painting' with the highest ratings. Also, provide me with the store details of the nearest Target location in zipcode '10009'.",
+        "precision": 0.5098047256469727,
+        "recall": 0.35039424896240234,
+        "f1": 0.4153286814689636
+      },
+      {
+        "task_id": "Step 10: As an aspiring writer, I'm always on the lookout for unique and captivating words to enhance my storytelling. Can you fetch the word of the day from dictionary.com to inspire my creativity? Additionally, provide me with a random message from kittichai API to add an element of surprise to my writing.",
+        "precision": 0.6692721843719482,
+        "recall": 0.5233542323112488,
+        "f1": 0.5873866081237793
+      },
+      {
+        "task_id": "Step 7: I'm exploring OCR options for my friend's art project. Can you recommend an OCR algorithm that performs well with different types of images? It would be great if you could also provide the current version of the OCR service.",
+        "precision": 0.575536847114563,
+        "recall": 0.547139048576355,
+        "f1": 0.5609787702560425
+      },
+      {
+        "task_id": "Step 9: I'm a researcher studying solar energy. Can you fetch the PV power forecast for the latitude 40.7128 and longitude -74.0060? Also, provide me with the shortened URL for a Helioviewer.org link.",
+        "precision": 0.781172513961792,
+        "recall": 0.6182962656021118,
+        "f1": 0.6902562379837036
+      },
+      {
+        "task_id": "Step 4: I'm organizing a basketball tournament for my community and I need to create a schedule. Can you provide me with a list of all NBA teams? Additionally, I want to add some fun elements to the tournament. Please share a random Chuck Norris joke related to basketball.",
+        "precision": 0.44245028495788574,
+        "recall": 0.3974183201789856,
+        "f1": 0.4187270402908325
+      },
+      {
+        "task_id": "Step 9: I need help organizing a Marvel-themed event for my company's annual party. Can you provide me with specific information about Marvel characters like Spider-Man and Hulk? It would also be great if you could fetch the latest update on the Lightning Roulette game and some entertaining memes to share with my colleagues.",
+        "precision": 0.6749421954154968,
+        "recall": 0.5723909139633179,
+        "f1": 0.6194508671760559
+      },
+      {
+        "task_id": "Step 7: I'm planning a trip to Paris next week and I want to explore the city through webcams. Can you provide me with a list of webcams near the Eiffel Tower with their images and locations? Additionally, fetch me the nearby airports and their details to plan my travel arrangements.",
+        "precision": 0.7019221782684326,
+        "recall": 0.5645838975906372,
+        "f1": 0.6258066296577454
+      },
+      {
+        "task_id": "Step 5: I want to cook a special dinner for my significant other. Can you suggest some romantic recipes and provide the nutritional information for each dish? Also, recommend some wine pairings for the dinner.",
+        "precision": 0.7040241956710815,
+        "recall": 0.6145530343055725,
+        "f1": 0.6562530398368835
+      },
+      {
+        "task_id": "Step 9: I'm an avid sports bettor and want to gather information on the available countries for betting. Can you provide me with a list of countries? Additionally, I'd like to know the bookmakers associated with each country.",
+        "precision": 0.6449309587478638,
+        "recall": 0.5653891563415527,
+        "f1": 0.6025463342666626
+      },
+      {
+        "task_id": "Step 11: I'm a data analyst and I need to gather information about different addresses in Adelaide, Australia. Can you give me a list of addresses that match the search string 'data analysis, Adelaide'? Additionally, I would like to retrieve detailed information about a specific address with the addressId '1234'.",
+        "precision": 0.600592851638794,
+        "recall": 0.4817391037940979,
+        "f1": 0.5346401929855347
+      },
+      {
+        "task_id": "Step 9: I want to surprise my friends with a unique song for our gathering. Could you please download the song 'The Phoenix' by user-977421934 on Soundcloud? I would also like to search for tracks by Eminem on Deezer and view the song information of a specific track. Lastly, provide me with a random quote in English to share with my friends.",
+        "precision": 0.6426851153373718,
+        "recall": 0.5034455060958862,
+        "f1": 0.5646074414253235
+      },
+      {
+        "task_id": "Step 5: I'm a sports enthusiast and I want to stay updated on the latest NBA games. Can you provide me with the details of the most recent game? Additionally, I'm interested in knowing the details of a specific game. Lastly, I need a random joke to add some humor to my day.",
+        "precision": 0.7459992170333862,
+        "recall": 0.6082925796508789,
+        "f1": 0.6701447367668152
+      },
+      {
+        "task_id": "Step 4: I'm considering investing in NFTs and I want to explore different options. Can you provide me with the aggregated loan offer levels for the collection with address 0x5af0d9827e0c53e4799bb226655a1de152a425a? Also, I'm curious about the rewards for the nakamigos collection. Please retrieve the rewards for nakamigos.",
+        "precision": 0.59461909532547,
+        "recall": 0.4708481431007385,
+        "f1": 0.5255446434020996
+      },
+      {
+        "task_id": "Step 6: My company is sponsoring a Formula 1 team and we need to track their performance. Can you give us the teams' rankings, points, team names, and drivers using the Teams API? Additionally, we would like to know the schedule and location of the upcoming race using the Race Calendar API.",
+        "precision": 0.43666017055511475,
+        "recall": 0.33868706226348877,
+        "f1": 0.38148364424705505
+      },
+      {
+        "task_id": "Step 11: My friend wants to know the versions of a specific file in their GroupDocs Watermark Cloud storage. Can you fetch the file versions for '/documents/sample.docx'? Additionally, check if a particular storage exists for them.",
+        "precision": 0.6349639892578125,
+        "recall": 0.5033402442932129,
+        "f1": 0.5615422129631042
+      },
+      {
+        "task_id": "Step 7: Can you validate the email address 'john.doe@example.com'? I also need the details of the country with the country code 'US'. Additionally, I would like to get the chain ID for the chain name 'bsc' from Token Scanner Multichain | Honeypot Checker Multichain.",
+        "precision": 0.6560801267623901,
+        "recall": 0.5309942960739136,
+        "f1": 0.5869469046592712
+      },
+      {
+        "task_id": "Step 8: I am interested in the top sports available on Sport Odds. Can you provide me with the top sports menu, the static translations, and the top sport menu streaming? It would be great if you could also include the event types.",
+        "precision": 0.47346973419189453,
+        "recall": 0.4362671375274658,
+        "f1": 0.45410776138305664
+      },
+      {
+        "task_id": "Step 9: I'm starting a new business venture and I need to make a speech announcing the new venture. Can you provide me with some quotes and words to start with? Additionally, I would like to gather news articles about successful entrepreneurs for inspiration. Your assistance would be highly valued.",
+        "precision": 0.6937193870544434,
+        "recall": 0.565261960029602,
+        "f1": 0.6229372024536133
+      },
+      {
+        "task_id": "Step 9: I'm planning a surprise party for my colleague who is leaving the company. Can you suggest some office-friendly pranks and provide me with some funny quotes to include in the farewell card? Additionally, find a nearby restaurant that can accommodate a large group for the party. Also, recommend some farewell gifts for our colleague.",
+        "precision": 0.5767651200294495,
+        "recall": 0.540647029876709,
+        "f1": 0.5581223964691162
+      },
+      {
+        "task_id": "Step 4: Retrieve the Gulag leaderboard for the top 2000 players. Furthermore, fetch the news articles and the featured shops in Rocket League.",
+        "precision": 0.6149747371673584,
+        "recall": 0.5080387592315674,
+        "f1": 0.5564154386520386
+      },
+      {
+        "task_id": "Step 6: I'm conducting a research project that involves analyzing the boundaries of postal codes and hexagons. Can you provide me with the hexagon boundary for the H3 index '613257753791561700'? Additionally, I'll need the boundaries of the LDU postal code 'L0R 1B7'.",
+        "precision": 0.5579079389572144,
+        "recall": 0.4136047959327698,
+        "f1": 0.47503936290740967
+      },
+      {
+        "task_id": "Step 4: My company is experiencing network issues and I suspect it's related to the DNS records. Can you perform a reverse DNS lookup for the IP address '192.168.1.1' and provide me with the name servers associated with it? Additionally, I need to perform a traceroute to 'example.com' to diagnose any network connectivity issues.",
+        "precision": 0.6560103893280029,
+        "recall": 0.5160446166992188,
+        "f1": 0.5776702165603638
+      },
+      {
+        "task_id": "Step 9: I'm planning a movie night and would like to create a playlist of YouTube videos. Search for 'movie trailers' on YouTube and retrieve the search results, including snippets and IDs. Then, fetch the videos from the search results and add them to a playlist. Provide the playlist details, including the snippets.",
+        "precision": 0.7205367684364319,
+        "recall": 0.6200594902038574,
+        "f1": 0.6665328145027161
+      },
+      {
+        "task_id": "Step 7: Get all the highlights from the user with the ID 'highlight:17984140099768575'. Please provide me with the download links for each highlight. Also, fetch the user information for the user with the ID 'highlight:17984140099768575', including their username, profile picture, full name, and the number of posts, followers, and following.",
+        "precision": 0.631210207939148,
+        "recall": 0.5072363018989563,
+        "f1": 0.5624729990959167
+      },
+      {
+        "task_id": "Step 7: I'm a financial analyst and I need to analyze the historical OHLC data for the EUR/USD currency pair. Can you fetch the OHLC history for the past month? Additionally, I would like to retrieve the latest prices for BTC, USD, AR, ETH, and BNB cryptocurrencies.",
+        "precision": 0.6806538105010986,
+        "recall": 0.5782089233398438,
+        "f1": 0.625262975692749
+      },
+      {
+        "task_id": "Step 7: I recently moved to a new apartment in Manchester. Can you help me find the nearest grocery stores and pharmacies? It would be great if you could provide their addresses and geolocation coordinates as well.",
+        "precision": 0.6989097595214844,
+        "recall": 0.5543951988220215,
+        "f1": 0.6183207035064697
+      },
+      {
+        "task_id": "Step 10: I am planning a trip to a foreign country and I need some information. Can you provide me with the country code, capital, population, language, currency, and timezone of the country? Additionally, can you convert the country name to its corresponding country code?",
+        "precision": 0.7591232061386108,
+        "recall": 0.7185244560241699,
+        "f1": 0.738266110420227
+      },
+      {
+        "task_id": "Step 11: Get the number of likes for the latest football posts on Instagram. Also, retrieve the current feed from the username 'therock' and provide the raw unprocessed data feed.",
+        "precision": 0.6543179750442505,
+        "recall": 0.5413307547569275,
+        "f1": 0.5924858450889587
+      },
+      {
+        "task_id": "Step 5: Can you help me find similar products to the one with id 12345? I would like to see the brand name, color, price, and images of each similar product. Please use the products/v3/list-similarities API.",
+        "precision": 0.6187155246734619,
+        "recall": 0.4909868538379669,
+        "f1": 0.5475003123283386
+      },
+      {
+        "task_id": "Step 7: My company is organizing a League of Legends event and we need to know the schedule for the leagues. Can you fetch the schedule for the leagues with IDs 98767991299243165, 99332500638116286, and 98767991302996019? Additionally, we would like to know the teams and players participating in these matches. Please fetch the teams and players for us.",
+        "precision": 0.7461246252059937,
+        "recall": 0.6488522291183472,
+        "f1": 0.6940969824790955
+      },
+      {
+        "task_id": "Step 6: I'm interested in increasing my positive quotient. Can you give me the questionnaire for the Positive Quotient Personality Test? Additionally, I would like to explore the DISC Personality Test. Please provide me with the questionnaire for that as well. Thank you!",
+        "precision": 0.678195059299469,
+        "recall": 0.5292396545410156,
+        "f1": 0.5945294499397278
+      },
+      {
+        "task_id": "Step 7: I'm organizing a company event and want to entertain the attendees with some funny YouTube videos. Can you recommend some popular comedy videos on YouTube? Also, help me convert the license plate 'S8TAN' from Alabama to its corresponding VIN number.",
+        "precision": 0.7070575952529907,
+        "recall": 0.6216613054275513,
+        "f1": 0.661615252494812
+      },
+      {
+        "task_id": "Step 5: I'm looking for a new place to live and I need some information about potential neighborhoods. Can you suggest some neighborhoods in New York City and provide map tiles with English labels for each neighborhood? Furthermore, I would like to find nearby schools and parks in each neighborhood.",
+        "precision": 0.7347927689552307,
+        "recall": 0.5949457883834839,
+        "f1": 0.6575154662132263
+      },
+      {
+        "task_id": "Step 4: I am planning a family vacation to a beach destination and I want to explore popular beach highlights on Instagram. Can you provide me with the details of the highlight items for the 'beach' highlight of the Instagram profile 'kimkardashian'? Additionally, can you fetch the video info for a popular TikTok video with the URL 'https://www.tiktok.com/@tiktok/video/6974862859000073478' and also get the hashtag info for the hashtag 'bts'?",
+        "precision": 0.6729863882064819,
+        "recall": 0.5836657285690308,
+        "f1": 0.6251516342163086
+      },
+      {
+        "task_id": "Step 12: I'm organizing a charity event and I need to calculate the tax rates for donations. Can you retrieve the tax rates applicable to my location using the address '123 Charity Avenue, Los Angeles, CA'? Additionally, I would like to obtain the ESG scores for some companies to ensure they align with our values.",
+        "precision": 0.6242430210113525,
+        "recall": 0.5128874778747559,
+        "f1": 0.5631129145622253
+      },
+      {
+        "task_id": "Step 9: Can you provide me with tweets that mention the user with the username 'cristiano'? I want to see tweets that have at least 100 replies and 50 retweets. Please make sure the tweets are in English.",
+        "precision": 0.6411159038543701,
+        "recall": 0.5603548884391785,
+        "f1": 0.5980210304260254
+      },
+      {
+        "task_id": "Step 8: I'm developing a phone system and I need some audio messages for the on-hold feature. Can you recommend an API that provides a variety of on-hold audio messages? Additionally, provide me with an API that can retrieve the current location of a phone call using the caller's phone number.",
+        "precision": 0.6317832469940186,
+        "recall": 0.5744751691818237,
+        "f1": 0.601767897605896
+      },
+      {
+        "task_id": "Step 9: I want to surprise my family with a weekend getaway to a nearby city. Can you search for available trips from our city to other cities on a specific date? Please include details about the departure and arrival stations, duration, and fares. Additionally, I would like to know if there are any public holidays during that time.",
+        "precision": 0.6748774647712708,
+        "recall": 0.6228080987930298,
+        "f1": 0.6477981209754944
+      },
+      {
+        "task_id": "Step 9: I'm looking for some movie recommendations for my upcoming date night. Can you provide me with four related movies to watch? Also, fetch the list of favorite libraries for user 1 from the Python Libraries tst API.",
+        "precision": 0.7037705183029175,
+        "recall": 0.6130386590957642,
+        "f1": 0.655278742313385
+      },
+      {
+        "task_id": "Step 7: I need complete SERP data for my company's website. Create a task using the Get SERP Async API to retrieve the data. Also, check the SSL information for our domain using the SSL Snitch API.",
+        "precision": 0.7972275018692017,
+        "recall": 0.7147121429443359,
+        "f1": 0.7537181377410889
+      },
+      {
+        "task_id": "Step 6: I'm a music lover and I want to explore different genres. Can you provide me with the editorial details of the playlist with the ID 54321 from the Deezer API? Additionally, fetch the basic user information of the artist from the Soundcloud API.",
+        "precision": 0.63470059633255,
+        "recall": 0.5851112008094788,
+        "f1": 0.6088979244232178
+      },
+      {
+        "task_id": "Step 5: I'm curious to know the current trends in climate change news. Can you provide me with recent news articles about climate change? Additionally, I would like to fetch the recent 50 news articles.",
+        "precision": 0.6683862209320068,
+        "recall": 0.6131333112716675,
+        "f1": 0.6395686268806458
+      },
+      {
+        "task_id": "Step 6: I want to create a multilingual user interface for my application. Can you provide me with a list of languages supported by the LanguageTool API and the Microsoft Translator Text API? Additionally, I would like to search for translations of a specific sentence using the MyMemory - Translation Memory API and the Simple & Elegant Translation Service API.",
+        "precision": 0.5479481220245361,
+        "recall": 0.49146348237991333,
+        "f1": 0.5181710720062256
+      },
+      {
+        "task_id": "Step 9: I am a student studying personal growth and I am looking for books on this topic. Can you provide me with a paginated list of books related to personal growth? Additionally, I would like to know the details of a specific book with ID 100.",
+        "precision": 0.7173689007759094,
+        "recall": 0.6110718250274658,
+        "f1": 0.6599676012992859
+      },
+      {
+        "task_id": "Step 4: I am curious to know the details of an Instagram post. Could you please provide me with the media info, caption, and download link for the post with the URL 'https://www.instagram.com/p/CqIbCzYMi5C/'? Additionally, fetch the username and user ID for the user ID 18527.",
+        "precision": 0.5528580546379089,
+        "recall": 0.5423855781555176,
+        "f1": 0.5475717186927795
+      },
+      {
+        "task_id": "Step 5: I am a big fan of classic movies. Can you search for the top 10 classic movies? Please provide details such as the name, size, seeders, leechers, and the upload date for each movie. Also, include the magnet link for each movie. Furthermore, it would be helpful to know the available torrent sources for the 'TorrentHunt' tool.",
+        "precision": 0.7147971391677856,
+        "recall": 0.5700318813323975,
+        "f1": 0.6342589855194092
+      },
+      {
+        "task_id": "Step 9: I'm organizing a fundraising event for a charity and I need to promote it online. Can you suggest some effective strategies to increase online visibility and attract more participants? Also, provide me with relevant web pages and images of successful charity events.",
+        "precision": 0.6241551041603088,
+        "recall": 0.5178318619728088,
+        "f1": 0.5660439729690552
+      },
+      {
+        "task_id": "Step 11: I want to surprise my friends with a Euro trip. Can you help me find the cheapest flights from London to Paris? Also, provide me with the available hotel options in Paris and the distance between these two cities.",
+        "precision": 0.6658433079719543,
+        "recall": 0.5675206780433655,
+        "f1": 0.6127629280090332
+      },
+      {
+        "task_id": "Step 5: I'm a teacher planning a space-themed lesson for my students. Can you give me some jokes about manatees to make the class more enjoyable? Additionally, provide information about the planet with the longest orbital period in Earth days.",
+        "precision": 0.6599915623664856,
+        "recall": 0.5449543595314026,
+        "f1": 0.5969815850257874
+      },
+      {
+        "task_id": "Step 11: Can you help me gather the key metrics for the company '123XYZ'? Retrieve the reports for this company and provide me with the stock price for 'TATAMOTORS'. Also, check the exchange status to ensure trading is active.",
+        "precision": 0.5509331226348877,
+        "recall": 0.3200829029083252,
+        "f1": 0.40491625666618347
+      },
+      {
+        "task_id": "Step 7: I'm working on a project exploring global population trends. Can you provide me with the population data for each decade? It would be helpful to have the growth rate as well.",
+        "precision": 0.42742401361465454,
+        "recall": 0.3346671462059021,
+        "f1": 0.37540069222450256
+      },
+      {
+        "task_id": "Step 9: I'm curious about the pageant contests that took place in a specific country. Can you search for the country and provide me with the details of the contests held there, including the winners' names and the number of entrants?",
+        "precision": 0.6504002213478088,
+        "recall": 0.5459918975830078,
+        "f1": 0.5936402678489685
+      },
+      {
+        "task_id": "Step 4: I'm curious about the positions of the Sun, Moon, and Uranus for the date range from 2023-03-01 to 2023-03-10. Can you provide me with that information? Also, give me a list of stars and deep space objects visible from my location with latitude 40.7128 and longitude -74.0060 during the same period.",
+        "precision": 0.6185938715934753,
+        "recall": 0.507003903388977,
+        "f1": 0.5572674870491028
+      },
+      {
+        "task_id": "Step 5: I am planning a cheese tasting event for my company and I need a list of all the available cheeses. Can you provide me with the names, regions, and descriptions of the cheeses? It would be great if I could also get the images of each cheese to include in the event brochure.",
+        "precision": 0.6595050096511841,
+        "recall": 0.5533642172813416,
+        "f1": 0.6017903685569763
+      },
+      {
+        "task_id": "Step 9: I want to gather information about the MacBook. Can you fetch the search results for 'Mac' on Amazon? Also, provide me with the product details, reviews, and offers for the product with ID B00K3OM3PS.",
+        "precision": 0.6432468891143799,
+        "recall": 0.5250235795974731,
+        "f1": 0.5781534314155579
+      },
+      {
+        "task_id": "Step 4: Please provide me with the details of the pet with ID 135. Additionally, fetch the inventory status and the order details for the same pet.",
+        "precision": 0.6608095169067383,
+        "recall": 0.5529086589813232,
+        "f1": 0.6020628213882446
+      },
+      {
+        "task_id": "Step 11: I need to create a new shortened link for my company's website. Can you generate a branded short link for me using the URL Link Shortener tool? Additionally, I would like to know a random number fact and retrieve information about a specific user with ID 789 using the user endpoint tool.",
+        "precision": 0.7134839296340942,
+        "recall": 0.5777698159217834,
+        "f1": 0.6384949088096619
+      },
+      {
+        "task_id": "Step 5: I'm a web developer and I need to parse some data for a project. Can you assist me with parsing the data using the 5ka_Porocila API? Additionally, I want to check the health status of the API to ensure it's functioning properly. Finally, find me the details of a specific domain name using the DOMAINE nc API.",
+        "precision": 0.6068503260612488,
+        "recall": 0.5177968144416809,
+        "f1": 0.5587977766990662
+      }
+    ]
+  },
+  "llm_judge": {
+    "n": 20,
+    "judge_model": "gpt-4o-mini",
+    "score_scale": "0-4, higher is better",
+    "mean_score": 1.4,
+    "score_counts": {
+      "1": 12,
+      "2": 8
+    },
+    "per_task": [
+      {
+        "task_id": "Step 5: I'm organizing a business trip to attend a conference in Tokyo. Help me find the best flight options from London to Tokyo with a flexible return date. Additionally, provide me with a list of hotels near the conference venue and the current exchange rate for GBP to JPY.",
+        "score": 1,
+        "rationale": "The model response fails to provide any flight options, hotel information, or exchange rate, making it mostly incorrect."
+      },
+      {
+        "task_id": "Step 8: I'm compiling a comprehensive database of VCT teams. Please provide me with the team names, player names, roles, roster status, contact details, and resident status for teams in all regions.",
+        "score": 1,
+        "rationale": "The model response provides incomplete information about the VCT teams, missing key details such as player roles, roster status, and resident status."
+      },
+      {
+        "task_id": "Step 5: I'm planning a trip to New York and I need some information about the upcoming football matches. Can you provide me with the predictions for the next 48 hours? Additionally, I'm interested in finding job opportunities in the tech industry. Could you search for Python developer jobs in New York? Also, fetch me some estimated salaries for these jobs.",
+        "score": 1,
+        "rationale": "The model response incorrectly assumes it has successfully fetched football match predictions and does not provide any job opportunities or salary estimates for Python developer jobs in New York."
+      },
+      {
+        "task_id": "Step 4: I want to surprise my partner with a homemade birthday cake. Can you give me a list of cake options along with their images? Also, I need the detailed recipe for cake ID 5, including the ingredients and step-by-step method.",
+        "score": 2,
+        "rationale": "The model response correctly identifies the need to retrieve the recipe for cake ID 5 but does not provide the actual recipe or a list of cake options as requested."
+      },
+      {
+        "task_id": "Step 5: I'm a music lover and I'm looking for some new tracks to add to my playlist. Can you provide me with the Finland Songs chart information on Billboard-API and the radio object for the ID 'radio123' on Deezer? Also, find the latest release of the artist with the ID '567072' on Shazam.",
+        "score": 2,
+        "rationale": "The model response partially addresses the task by attempting to find the latest release of the artist on Shazam, but it fails to provide any information about the Finland Songs chart or the radio object for 'radio123' on Deezer."
+      },
+      {
+        "task_id": "Step 7: Please give me the price data for the DJI index over the past 7 days and the top 5 worst performers for this index. I need this information for my investment analysis.",
+        "score": 1,
+        "rationale": "The model response indicates an inability to retrieve the required data and suggests an alternative approach, but it does not provide any actual price data or identify the worst performers, making it mostly incorrect."
+      },
+      {
+        "task_id": "Step 7: I'm a huge fan of Hearthstone and I want to expand my card collection. Can you help me find all the legendary cards and provide me with their details? Additionally, fetch me some information about the top Diablo 4 influencers and players to inspire me in my gaming journey.",
+        "score": 2,
+        "rationale": "The response partially addresses the task by acknowledging the issue with retrieving legendary cards but fails to provide any details about them or the top Diablo 4 influencers and players."
+      },
+      {
+        "task_id": "Step 6: I want to plan a movie night with my friends and watch some romance movies. Can you recommend some popular romance movies released today? Also, provide me with a random quote from an anime.",
+        "score": 1,
+        "rationale": "The model response fails to provide any recommendations for romance movies or a random anime quote, making it mostly incorrect."
+      },
+      {
+        "task_id": "Step 7: I am a film student and I need to research the latest trends and developments in the film industry. Can you provide me with recent movie news articles to keep me updated? Additionally, suggest some popular combinations of keywords that have been cited by news agencies in recent articles. Also, share the 100 most recent articles and their keywords to help me gather relevant information for my research.",
+        "score": 2,
+        "rationale": "The model response indicates that it has access to the recent articles and keywords, but it does not actually provide the requested list or popular keyword combinations, resulting in partial correctness."
+      },
+      {
+        "task_id": "Step 4: I am planning a road trip and I need to find airports along my route. Can you provide me with a list of airports that match the keyword 'California'? Additionally, I would like to know the makes and models of vehicles available for rent in California. Finally, could you give me some information about the tool 'CarbonSutra'?",
+        "score": 2,
+        "rationale": "The model response provides some airport information but lacks details on vehicle makes and models, and does not mention the tool 'CarbonSutra' adequately."
+      },
+      {
+        "task_id": "Step 4: I want to search for images related to 'liverpool' on the internet. Can you fetch the top 20 image search results? Additionally, show me the top search results for 'interesting facts about Liverpool'.",
+        "score": 2,
+        "rationale": "The model response partially addresses the user's request by mentioning the fetching of image results but fails to provide the complete list of top 20 image results and does not address the second part of the task regarding interesting facts about Liverpool."
+      },
+      {
+        "task_id": "Step 6: Tell me a random quote from the book 'Quiet'. Moreover, I would like to receive a random quote tagged with 'money'.",
+        "score": 1,
+        "rationale": "The model response provides a quote from 'Quiet' but it is incorrect, and while it includes a quote related to money, it is incomplete as it does not attribute the source correctly."
+      },
+      {
+        "task_id": "Step 4: I'm planning a movie night with my family and we need some show recommendations. Can you provide me with the list of shows currently available on Burning Series? Additionally, fetch a random hobby from the 'general' category using the Hobbies by API-Ninjas.",
+        "score": 1,
+        "rationale": "The model response fails to provide any show recommendations from Burning Series and does not attempt to fetch a random hobby, making it mostly incorrect."
+      },
+      {
+        "task_id": "Step 11: I'm a golf enthusiast and I want to stay updated on the latest rankings. Can you fetch the world rankings for the year 2022? I'm interested in knowing the top players and their previous ranks as well. Additionally, I want to get the FedExCup ranking leaderboard for the same year. Thanks!",
+        "score": 1,
+        "rationale": "The model response indicates an inability to retrieve the requested rankings and leaderboard, which is a significant failure in addressing the user's task."
+      },
+      {
+        "task_id": "Step 6: I'm planning a surprise party for my best friend's birthday next month. Can you help me find the top posts and comments made by my friend on Reddit? It would be great to include some trending memes from the subreddit they frequent as well. Also, check if their username is available on Behence and 9gag.",
+        "score": 1,
+        "rationale": "The model response fails to address the user's request for top posts and comments, and instead suggests an unrelated approach due to a rate limit error, making it mostly incorrect."
+      },
+      {
+        "task_id": "Step 10: I am planning a road trip with my friends and we need to rent a car. Can you search for available car rental options in our location and provide me with a list of options along with their prices, ratings, and images? Additionally, I would like to explore some travel accessories for our road trip. Please show me the travel accessories available in the database.",
+        "score": 1,
+        "rationale": "The model response fails to address the car rental options and only partially mentions travel accessories without providing a complete list or relevant details."
+      },
+      {
+        "task_id": "Step 5: I'm a developer working on a messaging app and I need to retrieve the messages sent by users. Can you help me fetch the message history and provide me with the message content and timestamps? Additionally, I would like to get the pricing information for sending SMS in different countries.",
+        "score": 1,
+        "rationale": "The model response fails to address the task of retrieving message history and pricing information, focusing instead on obtaining an access token without providing a complete solution."
+      },
+      {
+        "task_id": "Step 9: I'm a climate change researcher and I need access to a wide range of climate change news articles. Can you fetch all the climate change news from top news sites and also provide news from individual sources like The Guardian?",
+        "score": 2,
+        "rationale": "The model response acknowledges the failure to fetch news but does not provide a complete solution or alternative methods, making it partially correct."
+      },
+      {
+        "task_id": "Step 4: I'm throwing a number-themed party and I need some interesting facts to entertain my guests. Can you provide a trivia fact about the number 42? Additionally, I'd like to explore some albums by a specific artist. Could you fetch the details of an album with the ID XYZ123? And to add some humor to the event, a random Chuck Norris joke would be perfect.",
+        "score": 2,
+        "rationale": "The trivia fact about the number 42 is incorrect, and the response does not complete the request for album details or provide a Chuck Norris joke."
+      },
+      {
+        "task_id": "Step 5: I'm hosting a game night with my friends and I need some hilarious jokes to keep everyone entertained. Can you find a joke related to board games? Also, recommend a good pizza place for dinner. It would be great if you could provide some interesting facts about the pizza place's history.",
+        "score": 1,
+        "rationale": "The model response does not provide a board game joke or a pizza recommendation, making it mostly incorrect."
+      }
+    ]
+  }
+}
